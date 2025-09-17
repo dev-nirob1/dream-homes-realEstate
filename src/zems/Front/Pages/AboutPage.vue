@@ -1,0 +1,1 @@
+<template>abotu page</template>
