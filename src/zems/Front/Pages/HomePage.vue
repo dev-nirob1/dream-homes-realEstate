@@ -1,3 +1,8 @@
+<script setup>
+import HeroSection from '../Components/Section/HeroSection.vue';
+
+</script>
+
 <template>
-  homeppage
+  <HeroSection/>
 </template>
