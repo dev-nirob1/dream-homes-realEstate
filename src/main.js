@@ -1,7 +1,10 @@
 import './assets/main.css'
+
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+// Elements
 import App from './App.vue'
 import router from './router'
 import ListItem from './components/Elements/ListItem.vue'
@@ -16,7 +19,6 @@ import BaseTitle from './components/Elements/BaseTitle.vue'
 import BaseButton from './components/Elements/BaseButton.vue'
 
 const app = createApp(App)
-
 app.use(createPinia())
 app.use(router)
 

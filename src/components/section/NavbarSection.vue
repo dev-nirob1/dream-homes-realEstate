@@ -9,7 +9,7 @@ const handleHamburger = () => {
 onMounted(() => {
   const container = document.querySelector('.container');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 250) {
       container.classList.add('scrolling')
     } else {
       container.classList.remove('scrolling')
@@ -60,7 +60,7 @@ onMounted(() => {
 }
 
 .container {
-  transition: all 0.3s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .container.scrolling {

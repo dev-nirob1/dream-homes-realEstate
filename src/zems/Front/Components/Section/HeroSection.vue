@@ -1,84 +1,62 @@
+<script setup>
+</script>
+
 <template>
   <section class="hero">
-    <div class="overlaping">
-      <div class="content">
-        <h5 class="sub-title text-alternative">
-          <i class="fa-solid fa-home"></i> Your Perfect Home
-        </h5>
-        <h1 class="hero-title">Your Dream Home Awaits</h1>
-        <p>
-          Browse top properties in prime locations with guidance from verified
-          agents. Find a place that truly fits your lifestyle.
-        </p>
-        <div class="flex justify-center gap-1">
-          <button class="btn bg-alternative">Browse Properties</button><button class="btn bg-secondary">Learn
-            More</button>
-        </div>
+    <!-- Background image -->
+    <div class="image">
+      <BaseImage
+        image="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop" />
+    </div>
+
+    <!-- Overlay content -->
+    <div class="overlay">
+      <div class="container content">
+        <HeroTitle>Lorem ipsum dolor sit amet.</HeroTitle>
+        <BaseParagraph>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laboriosam. Dolores, alias.
+        </BaseParagraph>
+        <button class="btn-primary">View Details</button>
       </div>
     </div>
   </section>
 </template>
+
 <style scoped>
- .hero {
-  min-height: 100vh;
-  text-align: center;
-  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1650&q=80') center/cover no-repeat fixed;
-  color: var(--white-color);
+.hero {
   position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-.hero .overlaping {
+/* Full-screen background image */
+.hero .image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay for darkening the image */
+.hero .overlay {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgb(from var(--primary-color)r g b / 35%), rgb(from var(--primary-color)r g b / 85%), rgb(from var(--primary-color)r g b / 35%));
+  background: rgba(0, 0, 0, 0.3); /* dark overlay */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 6rem;
+  text-align: left;
 }
 
-.hero .content p {
-  margin: .75rem 0;
+/* Container for content */
+.hero .content {
+  color: white;
+  width: 100%;
+  padding: 0 1rem;
 }
 
-.hero .content .btn {
-  padding: .75rem 1rem;
-  font-size: .75rem;
-  color: var(--white-color);
-  border-radius: 1rem 0 1rem 0;
-}
-
-.hero .content .bg-secondary.btn {
-  color: var(--primary-color);
-}
-
-.hero .content .bg-secondary.btn:hover {
-  color: var(--white-color);
-  background-color: var(--primary-color);
-}
-
-.hero .content .bg-alternative.btn:hover {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-}
-
-@media (min-width: 768px) {
-  .hero .content .btn {
-    padding: 1.25rem 2rem;
-    font-size: 1.25rem;
-  }
-
-  .hero .content {
-    max-width: 70%;
-  }
-
-  .hero .content p {
-    font-size: 1.15rem;
-    margin: .75rem 0;
-  }
-
-}
 </style>
