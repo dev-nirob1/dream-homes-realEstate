@@ -1,124 +1,113 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 </script>
-
 <template>
   <!-- ======== Footer section ======== -->
-  <footer class="footer">
+  <footer class="footer bg-dark text-white">
     <div class="container medium-2 large-4 gap-2 py-1 medium-py-3">
-      <!-- Footer logo and social media links -->
+      <!-- Footer logo and contact info -->
       <div class="contact-info">
-        <RouterLink to="" class="logo">
-          <BaseImage image="https://www.webpoka.com/front/images/logo-2.png" alt="logo" />
+        <RouterLink to="/" class="logo">
+          <BaseImage image="/logo-header.png" alt="Real Estate Logo" />
         </RouterLink>
 
-        <BaseParagraph>We are a Bangladeshi software development company delivering innovative web, mobile, and
-          enterprise solutions to businesses worldwide.</BaseParagraph>
+        <BaseParagraph>
+          We connect buyers and sellers with trusted real estate solutions.
+          From dream homes to investment properties, we make every transaction simple and transparent.
+        </BaseParagraph>
 
         <ul>
-          <ListItem><span>Location: </span>Home 60, Road 27, Mirpur 12, Dhaka</ListItem>
-          <ListItem><span>Email: </span>support@webpoka.com</ListItem>
-          <ListItem><span>Phone: </span>
-            01941-861014, 09611-648163</ListItem>
+          <ListItem><span>Office: </span>House 45, Road 12, Gulshan 2, Dhaka</ListItem>
+          <ListItem><span>Email: </span>support@realestate.com</ListItem>
+          <ListItem><span>Phone: </span>+880 1234-567890</ListItem>
         </ul>
       </div>
 
       <!-- Quick navigation links -->
       <div>
-        <SubTitle>Links</SubTitle>
+        <SubTitle>Quick Links</SubTitle>
         <ul class="footer-links">
-          <ListItem>
-            <RouterLink to="">Contact Us</RouterLink>
-          </ListItem>
-          <ListItem>
-            <RouterLink to="">Submit a Ticket</RouterLink>
-          </ListItem>
-          <ListItem>
-            <RouterLink to="">Visit Knowledge Base</RouterLink>
-          </ListItem>
-          <ListItem>
-            <RouterLink to="">Support System</RouterLink>
-          </ListItem>
-          <ListItem>
-            <RouterLink to="">Refund Policy</RouterLink>
-          </ListItem>
-          <ListItem>
-            <RouterLink to="">Professional Services</RouterLink>
-          </ListItem>
-        </ul>
-      </div>
-
-      <!-- Buying/Selling Information -->
-      <div>
-        <SubTitle>Support</SubTitle>
-        <ul class="footer-links">
-          <ListItem>
-            <RouterLink to="/">Home</RouterLink>
-          </ListItem>
           <ListItem>
             <RouterLink to="/about">About Us</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/properties">Properties</RouterLink>
+            <RouterLink to="/properties">All Properties</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/blogs">Blogs</RouterLink>
+            <RouterLink to="/agents">Our Agents</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/contact-us">Contact</RouterLink>
+            <RouterLink to="/blogs">Blog</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/contact-us">Contact Us</RouterLink>
           </ListItem>
         </ul>
       </div>
 
-      <!-- image gallery part -->
-      <div class="gallery-img">
-        <SubTitle>Gallery</SubTitle>
-        <div class="all-3 gap-1">
-          <div @click="handleOpenModal(i)" v-for="(img, i) in images" :key="img.id">
-            <BaseImage :image="img.image" alt="gallery image" />
-          </div>
-        </div>
+      <!-- Support / Resources -->
+      <div>
+        <SubTitle>Resources</SubTitle>
+        <ul class="footer-links">
+          <ListItem>
+            <RouterLink to="/buying-guide">Buyer’s Guide</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/selling-guide">Seller’s Guide</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/faq">FAQ</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/privacy-policy">Privacy Policy</RouterLink>
+          </ListItem>
+          <ListItem>
+            <RouterLink to="/terms">Terms & Conditions</RouterLink>
+          </ListItem>
+        </ul>
+      </div>
+
+      <!-- Newsletter section -->
+      <div class="newsletter">
+        <SubTitle>Newsletter</SubTitle>
+        <BaseParagraph>
+          Subscribe to get the latest property updates, offers, and real estate insights.
+        </BaseParagraph>
+        <form class="newsletter-form">
+          <InputField
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+          <BaseButton type="submit">Subscribe</BaseButton>
+        </form>
       </div>
     </div>
 
     <!-- Footer bottom copyright -->
     <div class="footer-bottom">
       <div class="container flex">
-        <BaseParagraph>{{ new Date().getFullYear() }} &copy; All rights reserved by Webpoka, Bangladesh</BaseParagraph>
+        <BaseParagraph>{{ new Date().getFullYear() }} &copy; All rights reserved by RealEstate, Bangladesh</BaseParagraph>
         <div class="social-icon">
-          <a href="https://www.facebook.com/webpoka.bd" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://www.youtube.com/@webpoka" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-youtube"></i>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://wa.me/01941-861014" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/8801234567890" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
       </div>
     </div>
-
   </footer>
-
 </template>
 
 <style scoped>
 .footer {
-  position: relative;
-  color: var(--light-color);
+  color: var(--white-color);
   padding-top: 3rem;
-}
-
-.footer::after {
-  content: '';
-  background: url('https://www.webpoka.com/front/images/background/5.jpg') right no-repeat;
-  position: absolute;
-  top: -400px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
 }
 
 /* Logo Styles */
@@ -131,7 +120,6 @@ import { RouterLink } from 'vue-router';
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
-  color: var(--dark-color)
 }
 
 .footer .sub-title::after {
@@ -141,7 +129,7 @@ import { RouterLink } from 'vue-router';
   bottom: 0;
   width: 2rem;
   height: 1px;
-  background-color: var(--dark-color);
+  background-color: var(--white-color);
 }
 
 .footer .contact-info {
@@ -177,15 +165,15 @@ import { RouterLink } from 'vue-router';
   transition: all 0.3s ease;
 }
 
-.footer .gallery-img img {
-  max-width: 120px;
-  width: 100%;
+.footer .newsletter input{
+  background: var(--white-color);
+  padding: 1rem;
 }
-.footer .gallery-img img:hover {
-  cursor: pointer;
-  opacity: .7;
+.footer .newsletter .btn{
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem;
 }
-
 /* Footer copyright bar*/
 .footer .footer-bottom {
   padding: .5rem;
@@ -201,6 +189,7 @@ import { RouterLink } from 'vue-router';
 .footer-bottom .social-icon {
   display: flex;
   gap: .5rem;
+  color: var(--dark-color);
 }
 
 .footer-bottom a {
