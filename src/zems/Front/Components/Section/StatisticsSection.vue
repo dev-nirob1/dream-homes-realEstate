@@ -1,5 +1,5 @@
 <template>
-  <section class="statistics bg-white container">
+  <section class="statistics container">
       <ul class="small-2 larger-4 justify-center align-center gap-2">
         <!-- Properties Listed -->
         <ListItem>
@@ -49,6 +49,8 @@
   justify-content: center;
   gap: 1rem;
   padding: 1.5rem .5rem;
+  background: var(--white-color);
+  border-radius: .5rem;
   box-shadow: var(--box-shadow);
 }
 
