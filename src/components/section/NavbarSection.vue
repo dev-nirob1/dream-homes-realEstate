@@ -1,214 +1,137 @@
 <script setup>
-import { RouterLink } from 'vue-router';
 import { onMounted, ref } from 'vue';
 
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
+const isMenuOpen = ref(false);
+const handleHamburger = () => {
   isMenuOpen.value = !isMenuOpen.value;
-};
+}
 
 onMounted(() => {
-  const navbar = document.querySelector('.navbar');
-  const navLinks = document.querySelector('.nav-links')
-
+  const container = document.querySelector('.container');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('scrolling');
+    if (window.scrollY > 50) {
+      container.classList.add('scrolling')
     } else {
-      navbar.classList.remove('scrolling');
+      container.classList.remove('scrolling')
     }
-  });
-
-  // console.log(navbar.childNodes);
-  navLinks.childNodes.forEach(element => {
-    element.addEventListener('click', () => {
-      isMenuOpen.value = false
-    })
-  });
+  })
 })
 </script>
 
 <template>
-  <header class="navbar">
-    <nav class="flex justify-between align-center container">
-      <!-- Logo -->
-      <RouterLink to="/" class="logo">
-        <BaseImage class="width-full" image="https://www.webpoka.com/front/images/logo.png" alt="logo" />
-      </RouterLink>
-
-      <!-- Navigation Links -->
-      <div class="flex align-center gap-1">
+  <header class="navbar relative bg-dark">
+    <div class="container">
+      <nav class="flex justify-between align-center">
+        <RouterLink to="/" class="logo">
+          <BaseImage image="/logo-header.png" alt="logo" />
+        </RouterLink>
         <ul class="nav-links" :class="{ 'active': isMenuOpen }">
+          <ListItem class="mobile-logo">
+            <RouterLink to="/" class="logo">
+              <BaseImage image="/logo-header.png" alt="logo" />
+            </RouterLink>
+          </ListItem>
           <ListItem>
             <RouterLink to="/">Home</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/about-us">About</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/projects">Projects</RouterLink>
+            <RouterLink to="/properties">Properties</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/blogs">Blogs</RouterLink>
-          </ListItem>
-          <ListItem>
-            <RouterLink to="/contact-us">Contact</RouterLink>
-          </ListItem>
-
-          <ListItem>
-            <a href="https://www.fiverr.com/webpoka" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" height="25">
-
-                <rect width="120" height="40" rx="1" ry="1" fill="#1DBF73" />
-
-                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif"
-                  font-size="30" font-weight="bold" fill="#fff">
-                  fiverr
-                </text>
-              </svg>
-            </a>
+            <RouterLink to="/contact">Contact</RouterLink>
           </ListItem>
         </ul>
-      </div>
 
-      <!-- Mobile Menu Toggle Button -->
-      <BaseButton class="hamburger" @click="toggleMenu">
-        <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2x"></i>
-      </BaseButton>
-    </nav>
+        <div @click="handleHamburger" class="hamburger flex-center">
+          <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
+        </div>
+      </nav>
+    </div>
   </header>
+
 </template>
 
 <style scoped>
-.navbar.scrolling {
-  background: var(--dark-color);
+.navbar {
   padding: .75rem 0;
 }
 
-.navbar {
-  padding: 0.5rem 0;
+.container {
+  transition: all 0.3s ease-in-out;
+}
+
+.container.scrolling {
+  background: var(--dark-color);
+  border-radius: 1rem;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   z-index: 999;
-  transition: all 0.3s ease;
-  color: var(--white-color);
+  padding: 0.5rem 1rem;
 }
 
-.navbar a {
-  text-decoration: none;
-}
-
-.logo img {
-  height: 70px;
+.navbar .logo {
   width: auto;
-  display: block;
+  height: 60px;
+}
+
+.navbar .logo img {
+  height: 100%;
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-}
-
-.navbar ul {
-  list-style: none;
-  position: fixed;
-  top: 5rem;
-  left: -100%;
-  width: 80%;
-  margin: 0;
-  background: var(--dark-color);
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2rem;
-  gap: 1.5rem;
-  transition: 0.3s;
-  font-size: 1rem;
-  font-weight: 600;
-
-}
-
-.navbar ul.active {
-  top: 5rem;
-  left: 0;
   color: var(--white-color);
+  background: var(--dark-color);
+  padding: 1rem 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 0;
+  height: 100vh;
+  z-index: 1;
+  transition: all .3s ease-in-out;
 }
 
-/* .navbar ul .fiverr {
-height: auto;
-width: 25px;
+.nav-links.active {
+  left: 0;
+  width: 60vw;
 }
-.navbar ul .fiverr img{
-height: 100%;
-width: 100%;
-} */
 
-.navbar ul li a {
-  position: relative;
+.nav-links a {
   display: inline-block;
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
-  padding: 0.5rem 0;
+  padding: .5rem 1rem;
 }
 
-.navbar ul li .router-link-exact-active {
-  color: var(--accent-color);
-}
-
-/* Mobile menu toggle */
 .hamburger {
-  height: 3rem;
-  width: 3rem;
-  background: var(--accent-color);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  background: var(--secondary-color);
 }
 
-@media (min-width: 992px) {
-  .navbar {
-    padding-top: 3rem;
-  }
+@media (min-width: 768px) {
 
-  .navbar ul {
-    position: inherit;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    background-color: transparent;
-    padding: 0.75rem 0;
-  }
-
-  /* Desktop menu hover effects */
-  .navbar ul li a::after,
-  .navbar ul li .router-link-exact-active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent-color);
-    transition: width 0.3s ease;
-  }
-
-  .navbar ul li .router-link-exact-active::after {
-    width: 100%;
-  }
-
-  .navbar ul li a:hover::after {
-    width: 100%;
-  }
-
-  /* expand navlinks on desktop  */
-  .hamburger {
+  .hamburger,
+  .mobile-logo {
     display: none;
+  }
+
+  .nav-links {
+    position: static;
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+    flex-direction: row;
+  }
+  li a.router-link-exact-active{
+    background: var(--primary-color);
+    border-radius: .25rem;
   }
 }
 </style>

@@ -13,8 +13,8 @@ html {
   --heading-font: "Quicksand", serif;
 
   --primary-color: #1E3A8A;
-  --secondary-color: #F59E0B;
-  --alternative-color: #F3F4F6;
+  --secondary-color: #38BDF8;
+  --alternative-color: #F9FAFB;
   /* --highlight-color: #e83e8c;
   --accent-color: #ff9600; */
   --white-color: #ffffff;
@@ -81,6 +81,7 @@ h6 {
 /* anchor color inherit  */
 a {
   text-decoration: none;
+  display: inline-block;
   color: inherit;
 }
 
@@ -94,12 +95,17 @@ a {
 .bg-secondary {
   background-color: var(--secondary-color);
 }
+.bg-dark {
+  background-color: var(--dark-color);
+}
 .bg-white {
   background-color: var(--white-color);
 }
 .text-center {
   text-align: center;
 }
+
+
 ul {
   list-style: none;
   padding-left: 0.5rem;
