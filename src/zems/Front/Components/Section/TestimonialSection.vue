@@ -34,9 +34,7 @@ const testimonials = [
 
       <div class="medium-2 large-3 gap-2">
         <TestimonialCard v-for="review in testimonials" :review="review" :key="review.id" />
-
       </div>
-
 
     </div>
   </section>
