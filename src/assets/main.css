@@ -84,6 +84,9 @@ a {
   display: inline-block;
   color: inherit;
 }
+img {
+  display: block;
+}
 
 /* colors   */
 .bg-light {
@@ -108,7 +111,7 @@ a {
 
 ul {
   list-style: none;
-  padding-left: 0.5rem;
+  padding: 0;
   margin: 0;
 }
 
