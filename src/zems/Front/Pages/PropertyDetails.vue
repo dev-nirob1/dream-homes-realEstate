@@ -1,5 +1,4 @@
-<script setup lang="ts">
-import ImageGallery from '../Components/Section/ImageGallery.vue';
+<script>
 
 </script>
 
@@ -8,7 +7,6 @@ import ImageGallery from '../Components/Section/ImageGallery.vue';
     <div class="container">
       <div class="medium-2 large-5 gap-2">
         <div class="border large-span-3">
-          <ImageGallery/>
         </div>
         <div class="border large-span-2">
           right/bottom

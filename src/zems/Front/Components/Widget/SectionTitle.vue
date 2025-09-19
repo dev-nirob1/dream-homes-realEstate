@@ -11,8 +11,8 @@ defineProps({
 
 <template>
   <div class="section-title">
-    <SubTitle>Our Properties</SubTitle>
-    <BaseTitle>Explore Your Dream Home With Us</BaseTitle>
+    <SubTitle>{{subTitle}}</SubTitle>
+    <BaseTitle>{{ title }}</BaseTitle>
   </div>
 </template>
 
