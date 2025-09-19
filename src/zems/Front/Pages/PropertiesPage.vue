@@ -1,3 +1,8 @@
+<script setup>
+import BreadCrumb from '../Components/Widget/BreadCrumb.vue';
+
+</script>
+
 <template>
-  properties page
+  <BreadCrumb/>
 </template>

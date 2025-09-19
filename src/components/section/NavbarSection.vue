@@ -9,7 +9,7 @@ const handleHamburger = () => {
 onMounted(() => {
   const container = document.querySelector('.container');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 250) {
+    if (window.scrollY > 100) {
       container.classList.add('scrolling')
     } else {
       container.classList.remove('scrolling')
