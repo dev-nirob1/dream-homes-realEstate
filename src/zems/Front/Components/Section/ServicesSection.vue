@@ -1,36 +1,61 @@
 <script setup>
 import SectionTitle from '../Widget/SectionTitle.vue';
+const services = [
+  {
+    id: 1,
+    title: "Property Sales",
+    icon: "fas fa-home",
+    details: "We help clients buy and sell properties efficiently, providing expert guidance throughout the process to ensure smooth transactions and satisfaction."
+  },
+  {
+    id: 2,
+    title: "Property Rentals",
+    icon: "fas fa-key",
+    details: "Our team offers curated rental listings and management services, making it easy for tenants and landlords to connect seamlessly and securely."
+  },
+  {
+    id: 3,
+    title: "Property Management",
+    icon: "fas fa-building",
+    details: "We provide comprehensive management solutions including maintenance, tenant support, and administrative services to keep properties running efficiently."
+  },
+  {
+    id: 4,
+    title: "Investment Consulting",
+    icon: "fas fa-chart-line",
+    details: "Our experts guide investors to make smart real estate decisions, offering insights on market trends, potential returns, and strategic property investments."
+  },
+  {
+    id: 5,
+    title: "Interior Design",
+    icon: "fas fa-paint-roller",
+    details: "We create beautiful, functional living spaces with modern interior design solutions that reflect clients’ tastes and enhance property value."
+  },
+  {
+    id: 6,
+    title: "Legal Assistance",
+    icon: "fas fa-gavel",
+    details: "Our legal team ensures all property transactions comply with regulations, providing contracts, documentation, and advice to protect clients’ interests."
+  }
+];
 
 </script>
 
 <template>
-  <section class="services">
+  <section class="services bg-light">
     <div class="container">
       <!-- Section Title -->
       <SectionTitle title="Our Services" subTitle="What We Offer" class="mb-2" />
 
-      <!-- Services Grid -->
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-home"></i>
-          <h4>Property Sales</h4>
-          <p>Helping you find and sell properties quickly with expert guidance.</p>
+      <div class="medium-2 large-3 gap-2">
+        <div v-for="item in services" :key="item.id" class="service-card">
+          <div class="icon flex-center">
+            <i class="fa-2x" :class="item.icon"></i>
+          </div>
+          <SubTitle>{{ item.title }}</SubTitle>
+          <BaseParagraph>{{ item.details }}</BaseParagraph>
         </div>
-        <div class="service-card">
-          <i class="fas fa-key"></i>
-          <h4>Property Rentals</h4>
-          <p>Find your perfect rental property with our curated listings.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-building"></i>
-          <h4>Property Management</h4>
-          <p>Complete management services for residential and commercial properties.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-chart-line"></i>
-          <h4>Investment Consulting</h4>
-          <p>Expert advice to help you make smart property investments.</p>
-        </div>
+
       </div>
     </div>
   </section>
@@ -41,40 +66,29 @@ import SectionTitle from '../Widget/SectionTitle.vue';
   padding: 4rem 0;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
 .service-card {
+  position: relative;
+
   background: var(--white-color);
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
   box-shadow: var(--box-shadow);
+  margin-top: 2rem;
+
+  padding: 4rem 1.5rem 1.5rem;
+  border-radius: .75rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: visible;
 }
 
-.service-card i {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.service-card h4 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.service-card p {
-  font-size: 0.95rem;
-  color: var(--text-color);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+.service-card .icon {
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  color: var(--white-color);
+  background: var(--primary-color);
 }
 </style>

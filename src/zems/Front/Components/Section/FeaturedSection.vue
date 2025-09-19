@@ -2,6 +2,7 @@
 import PropertyCard from '../Widget/PropertyCard.vue';
 import SectionTitle from '../Widget/SectionTitle.vue';
 
+
 const properties = [
   {
     id: 1,
@@ -24,6 +25,27 @@ const properties = [
     location: "Dhanmondi, Dhaka",
     price: "280,000"
   },
+  {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364?q=80&w=996&auto=format&fit=crop",
+    title: "Elegant Townhouse",
+    location: "Uttara, Dhaka",
+    price: "350,000"
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=996&auto=format&fit=crop",
+    title: "Modern Penthouse",
+    location: "Gulshan 1, Dhaka",
+    price: "600,000"
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=996&auto=format&fit=crop",
+    title: "Beachfront Villa",
+    location: "Cox's Bazar, Bangladesh",
+    price: "750,000"
+  }
 ];
 </script>
 

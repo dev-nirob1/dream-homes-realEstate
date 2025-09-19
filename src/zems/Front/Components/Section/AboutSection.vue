@@ -1,6 +1,7 @@
 <script setup>
+import { useRoute } from 'vue-router';
 import SectionTitle from '../Widget/SectionTitle.vue';
-
+const route = useRoute()
 </script>
 
 <template>
@@ -49,7 +50,7 @@ import SectionTitle from '../Widget/SectionTitle.vue';
             </ListItem>
           </ul>
 
-          <BaseButton>Our Services</BaseButton>
+          <BaseButton v-if="route.name !== 'about'">Our Services</BaseButton>
         </div>
       </div>
     </div>
@@ -57,7 +58,7 @@ import SectionTitle from '../Widget/SectionTitle.vue';
 </template>
 <style scoped>
 .about {
-  padding: 3.75rem 0;
+  padding: 3.75rem 0 5rem 0;
 }
 
 .about .image {
