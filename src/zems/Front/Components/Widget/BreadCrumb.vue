@@ -1,58 +1,53 @@
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute()
+</script>
+
 <template>
-  <section class="breadcrumb-large">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol>
-          <li><a href="/">Home</a></li>
-          <li><i class="fa-solid fa-angle-right"></i></li>
-          <li><a href="/properties">Properties</a></li>
-          <li><i class="fa-solid fa-angle-right"></i></li>
-          <li class="active">Luxury Villa</li>
-        </ol>
-      </nav>
-      <h1 class="page-title">Luxury Villa</h1>
-    </div>
+  <section class="breadcrumb bg-light">
+    <ul class="container">
+      <ListItem><a href="/">Home</a></ListItem>
+      <ListItem>{{ route.name }}</ListItem>
+      <ListItem v-if="route.params.slug">{{ route.params.slug }}</ListItem>
+    </ul>
   </section>
 </template>
 
 <style scoped>
-.breadcrumb-large {
-  background: #f8f9fa;
-  padding: 4rem 0 3rem;
-  border-bottom: 1px solid #eee;
+.breadcrumb {
+  padding: 3.75rem 0;
 }
 
-.breadcrumb-large nav ol {
+.breadcrumb ul {
+  font-size: 1rem;
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  list-style: none;
-  margin: 0 0 1rem 0;
+  /* align-items: center; */
+  gap: 1rem;
   padding: 0;
-  font-size: 0.95rem;
-  color: #666;
 }
 
-.breadcrumb-large nav a {
+.breadcrumb ul li a {
+  position: relative;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
+  padding-bottom: .5rem;
+  transition: all .3s ease-in-out;
 }
 
-.breadcrumb-large nav a:hover {
-  color: var(--primary-color);
+.breadcrumb ul li a:hover {
+  color: var(--secondary-color)
 }
 
-.breadcrumb-large nav li.active {
-  color: var(--primary-color);
-  font-weight: 600;
+.breadcrumb ul li:not(:last-child)::after {
+  content: ">";
+  font-family: monospace;
+  padding-left: 1rem;
+  color: var(--secondary-color)
 }
 
-.page-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0;
-  color: #111;
+@media (min-width: 768px) {
+  .breadcrumb ul {
+    font-size: 1.25rem;
+  }
 }
 </style>

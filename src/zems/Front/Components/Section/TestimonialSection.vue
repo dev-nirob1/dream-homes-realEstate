@@ -1,4 +1,5 @@
 <script setup>
+import SectionTitle from '../Widget/SectionTitle.vue';
 import TestimonialCard from '../Widget/TestimonialCard.vue';
 
 const testimonials = [
@@ -29,8 +30,7 @@ const testimonials = [
 <template>
   <section class="testimonials">
     <div class="container">
-      <SubTitle>Testimonials</SubTitle>
-      <HeroTitle class="mb-2">What Our Clients Say</HeroTitle>
+      <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="Testimonials" />
 
       <div class="medium-2 large-3 gap-2">
         <TestimonialCard v-for="review in testimonials" :review="review" :key="review.id" />

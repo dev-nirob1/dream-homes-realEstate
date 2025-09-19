@@ -149,25 +149,6 @@ ul {
   justify-content: center;
 }
 
-/* section title  */
-.section-title span {
-  margin-left: 1rem;
-}
-.text-center.section-title span {
-  margin-left: 0;
-}
-.testimonials .section-title,
-.testimonials .section-title .sub-title {
-  color: var(--white-color);
-}
-
-.testimonials .section-title span::before,
-.testimonials .section-title span::after {
-  background: var(--white-color);
-}
-.testimonials .section-title span {
-  background-color: var(--accent-color);
-}
 /* button styles  */
 .btn {
   position: relative;
@@ -181,60 +162,6 @@ ul {
   text-align: center;
   transition: all 0.3s ease-in-out;
   line-height: 1;
-}
-
-/* --------primary-btn----------- */
-.btn-primary {
-  padding: 1.1rem 5rem 1.1rem 2rem;
-  border-radius: 3rem;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  color: var(--white-color);
-  font-size: 1.1rem;
-}
-
-.btn-primary i {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 2rem;
-  width: 3.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--dark-color);
-  background-color: var(--white-color);
-  height: 100%;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
-}
-
-/* ---------secondary button -------------- */
-.btn-secondary {
-  color: var(--white-color);
-  background: var(--primary-color);
-  padding: 1rem 2.5rem;
-  border-radius: 2rem;
-  z-index: 1;
-}
-
-.btn-secondary::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  width: 0;
-  background: rgb(from var(--highlight-color) r g b / 95%);
-  z-index: -1;
-  transition: width 0.5s ease-in-out;
-}
-
-.btn-secondary:hover::after {
-  width: 100%;
 }
 
 /* ---------circle btn ------------ */

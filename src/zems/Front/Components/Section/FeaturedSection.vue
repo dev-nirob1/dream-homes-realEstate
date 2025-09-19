@@ -1,5 +1,6 @@
 <script setup>
 import PropertyCard from '../Widget/PropertyCard.vue';
+import SectionTitle from '../Widget/SectionTitle.vue';
 
 const properties = [
   {
@@ -29,8 +30,7 @@ const properties = [
 <template>
   <section class="featured-properties bg-light">
     <div class="container">
-      <SubTitle>Featured Properties</SubTitle>
-      <HeroTitle class="mb-2">Find Your Dream Home</HeroTitle>
+      <SectionTitle class="mb-2" title="Find Your Dream Home" subTitle="Featured Properties"/>
 
       <div class="medium-2 large-3 gap-2">
         <PropertyCard v-for="item in properties" :item="item" :key="item.id" />

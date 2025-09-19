@@ -3,6 +3,7 @@ import AboutPage from './Pages/AboutPage.vue'
 import ContactPage from './Pages/ContactPage.vue'
 import HomePage from './Pages/HomePage.vue'
 import PropertiesPage from './Pages/PropertiesPage.vue'
+import PropertyDetails from './Pages/PropertyDetails.vue'
 
 export default [
   {
@@ -23,6 +24,11 @@ export default [
         path: '/properties',
         name: 'properties',
         component: PropertiesPage,
+      },
+      {
+        path: '/properties/:slug',
+        name: 'properties-details',
+        component: PropertyDetails,
       },
       {
         path: '/contact',

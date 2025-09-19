@@ -1,39 +1,39 @@
 <template>
   <section class="statistics container">
-      <ul class="small-2 larger-4 justify-center align-center gap-2">
-        <!-- Properties Listed -->
-        <ListItem>
-          <i class="fa-solid fa-building fa-2x"></i>
-          <div>
-            <BaseTitle>850+</BaseTitle>
-            <BaseParagraph>Properties Listed</BaseParagraph>
-          </div>
-        </ListItem>
-        <!-- Happy Clients -->
-        <ListItem>
-          <i class="fa-solid fa-user-check fa-2x"></i>
-          <div>
-            <BaseTitle>600+</BaseTitle>
-            <BaseParagraph>Happy Clients</BaseParagraph>
-          </div>
-        </ListItem>
-        <!-- Years of Excellence -->
-        <ListItem>
-          <i class="fa-solid fa-calendar-check fa-2x"></i>
-          <div>
-            <BaseTitle>12+</BaseTitle>
-            <BaseParagraph>Years of Excellence</BaseParagraph>
-          </div>
-        </ListItem>
-        <!-- Awards Won -->
-        <ListItem>
-          <i class="fa-solid fa-award fa-2x"></i>
-          <div>
-            <BaseTitle>15+</BaseTitle>
-            <BaseParagraph>Awards Won</BaseParagraph>
-          </div>
-        </ListItem>
-      </ul>
+    <ul class="small-2 larger-4 justify-center align-center gap-2">
+      <!-- Properties Listed -->
+      <ListItem>
+        <i class="fa-solid fa-building fa-2x"></i>
+        <div>
+          <BaseTitle>850+</BaseTitle>
+          <BaseParagraph>Properties Listed</BaseParagraph>
+        </div>
+      </ListItem>
+      <!-- Happy Clients -->
+      <ListItem>
+        <i class="fa-solid fa-user-check fa-2x"></i>
+        <div>
+          <BaseTitle>600+</BaseTitle>
+          <BaseParagraph>Happy Clients</BaseParagraph>
+        </div>
+      </ListItem>
+      <!-- Years of Excellence -->
+      <ListItem>
+        <i class="fa-solid fa-calendar-check fa-2x"></i>
+        <div>
+          <BaseTitle>12+</BaseTitle>
+          <BaseParagraph>Years of Excellence</BaseParagraph>
+        </div>
+      </ListItem>
+      <!-- Awards Won -->
+      <ListItem>
+        <i class="fa-solid fa-award fa-2x"></i>
+        <div>
+          <BaseTitle>15+</BaseTitle>
+          <BaseParagraph>Awards Won</BaseParagraph>
+        </div>
+      </ListItem>
+    </ul>
   </section>
 </template>
 
@@ -41,6 +41,7 @@
 .statistics {
   position: relative;
   margin-top: -4rem;
+  padding-bottom: 3rem;
 }
 
 .statistics ul li {

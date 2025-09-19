@@ -1,3 +1,14 @@
+<script setup>
+defineProps({
+  title: {
+    type: String
+  },
+  subTitle: {
+    type: String
+  }
+})
+</script>
+
 <template>
   <div class="section-title">
     <SubTitle>Our Properties</SubTitle>
@@ -5,38 +16,33 @@
   </div>
 </template>
 
-<style scoped>
-
-/* Unique subtitle style only */
-.sub-title {
+<style>
+.section-title .sub-title {
   display: inline-block;
-  font-size: 0.9rem;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #2563eb;
+  color: var(--secondary-color);
   position: relative;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
 
-/* Decorative lines on both sides */
-.sub-title::before,
-.sub-title::after {
+.section-title .sub-title::before,
+.section-title .sub-title::after {
   content: "";
   position: absolute;
   top: 50%;
   width: 30px;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #4f46e5);
+  background: var(--secondary-color);
 }
 
-.sub-title::before {
+.section-title .sub-title::before {
   left: 0;
   transform: translateY(-50%);
 }
 
-.sub-title::after {
+.section-title .sub-title::after {
   right: 0;
   transform: translateY(-50%);
 }

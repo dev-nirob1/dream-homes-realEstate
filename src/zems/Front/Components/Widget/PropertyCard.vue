@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 defineProps({
   item: {
     type: Object
@@ -14,7 +16,7 @@ defineProps({
       <SubTitle>{{ item.title }}</SubTitle>
       <BaseParagraph><i class="fa-solid fa-location-dot"></i> {{ item.location }}</BaseParagraph>
       <BaseParagraph>${{ item.price }}</BaseParagraph>
-      <BaseButton>View Details</BaseButton>
+      <RouterLink class="btn" :to="`/properties/${id}`">View Details</RouterLink>
     </div>
   </div>
 </template>
@@ -24,6 +26,7 @@ defineProps({
   overflow: hidden;
   height: 450px;
   width: auto;
+  cursor:pointer;
 }
 
 .properties-card .image {
@@ -35,6 +38,7 @@ defineProps({
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: .5s ease-in-out;
 }
 
 .properties-card .card-content {
@@ -55,8 +59,14 @@ defineProps({
 }
 
 .properties-card .btn {
+  padding: .75rem 1rem;
   color: var(--white-color);
   background: var(--secondary-color);
   border-radius: .5rem;
+}
+
+.properties-card:hover img {
+  transform: scale(1.1);
+
 }
 </style>

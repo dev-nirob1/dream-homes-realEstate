@@ -1,6 +1,7 @@
 <script setup>
 import BreadCrumb from '../Components/Widget/BreadCrumb.vue';
 import PropertyCard from '../Components/Widget/PropertyCard.vue';
+import SectionTitle from '../Components/Widget/SectionTitle.vue';
 
 const properties = [
   {
@@ -31,6 +32,7 @@ const properties = [
   <BreadCrumb />
   <div class="properties">
     <div class="container">
+       <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="All Properties" />
       <div class="medium-2 large-3 gap-2">
         <PropertyCard v-for="item in properties" :item="item" :key="item.id" />
       </div>
