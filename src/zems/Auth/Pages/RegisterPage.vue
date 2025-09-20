@@ -5,8 +5,11 @@ import { RouterLink } from 'vue-router';
 <template>
   <div class="login flex-center">
     <div class="medium-2 align-center gap-2">
+      <div class="image">
+        <BaseImage image="/login.jpg" />
+      </div>
       <div class="p-1">
-        <BaseTitle class="text-center mb-2">Login To Your Account</BaseTitle>
+        <BaseTitle class="text-center mb-2">Create Your Account</BaseTitle>
         <form>
           <label>
             Your Name
@@ -26,27 +29,20 @@ import { RouterLink } from 'vue-router';
           </label>
           <BaseButton class="width-full bg-secondary">Login</BaseButton>
         </form>
-        <RouterLink class="text-right" to="">Forgotten Your Password</RouterLink>
         <div class="text-center">
-          <SubTitle class="mt-3">Already Have An Account</SubTitle>
-          <RouterLink to="/login">Login</RouterLink>
+          <SubTitle class="mt-2">Already Have An Account?</SubTitle>
+          <RouterLink to="/login">Login Here</RouterLink>
 
         </div>
-      </div>
-      <div class="image">
-        <BaseImage image="/login.jpg" />
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.login {
-  min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
+.login a:hover {
+  color: var(--secondary-color);
 }
-
 .login .image {
   width: 100%;
   height: 100%;
@@ -55,6 +51,6 @@ import { RouterLink } from 'vue-router';
 .login .image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 </style>
-

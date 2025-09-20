@@ -20,8 +20,8 @@ import { RouterLink } from 'vue-router';
         </form>
         <RouterLink class="text-right" to="">Forgotten Your Password</RouterLink>
         <div class="text-center">
-          <SubTitle class="mt-3">Don't Have An Account</SubTitle>
-          <RouterLink to="/register">Register</RouterLink>
+          <SubTitle class="mt-3">Don't Have An Account?</SubTitle>
+          <RouterLink to="/register">Register Here</RouterLink>
 
         </div>
       </div>
@@ -33,12 +33,9 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style scoped>
-.login {
-  min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
+.login a:hover {
+  color: var(--secondary-color);
 }
-
 .login .image {
   width: 100%;
   height: 100%;

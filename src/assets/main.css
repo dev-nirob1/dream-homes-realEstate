@@ -154,6 +154,10 @@ ul {
   outline: none;
   border: none;
   overflow: hidden;
+  padding: 1rem;
+  margin: .75rem 0;
+  border-radius: .5rem;
+  color: var(--white-color);
   font-size: 1rem;
   text-align: center;
   transition: all 0.3s ease-in-out;
