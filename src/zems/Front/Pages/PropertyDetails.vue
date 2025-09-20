@@ -7,7 +7,8 @@ import MapSection from '../Components/Widget/MapSection.vue';
 </script>
 
 <template>
-  <BreadCrumb />
+  <BreadCrumb name="Property Details"
+    image="https://tunatheme.com/tf/html/quarter-preview/quarter/img/service/31.jpg" />
   <div class="property-details">
 
     <div class="container">
