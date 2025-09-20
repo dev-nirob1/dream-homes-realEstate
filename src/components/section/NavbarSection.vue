@@ -45,6 +45,11 @@ onMounted(() => {
           </ListItem>
         </ul>
 
+        <div class="desktop">
+          <RouterLink to="/login"><i class="fa-solid fa-user"></i></RouterLink>
+          <RouterLink class="btn bg-secondary" to="/login">Add Property</RouterLink>
+        </div>
+
         <div @click="handleHamburger" class="hamburger flex-center">
           <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
         </div>
@@ -115,6 +120,10 @@ onMounted(() => {
   background: var(--secondary-color);
 }
 
+.desktop {
+  display: none;
+}
+
 @media (min-width: 768px) {
 
   .hamburger,
@@ -129,9 +138,26 @@ onMounted(() => {
     background: transparent;
     flex-direction: row;
   }
-  li a.router-link-exact-active{
-    background: var(--primary-color);
+
+  li a.router-link-exact-active {
+    background: var(--secondary-color);
     border-radius: .25rem;
+  }
+
+  .desktop {
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white-color);
+  }
+  .desktop a i {
+    font-size: 1.25rem;
+    padding: .5rem;
+  }
+  .desktop .btn {
+    padding: .75rem 1rem;
+    border-radius: .5rem;
   }
 }
 </style>

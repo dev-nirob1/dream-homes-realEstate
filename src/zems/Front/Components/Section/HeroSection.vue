@@ -78,10 +78,12 @@
   width: 100%;
   object-fit: cover;
 }
+
 .hero .btn-circle {
   height: 4.5rem;
   width: 4.5rem;
 }
+
 @media (min-width: 768px) {
   .hero .overlay .content {
     max-width: 60%;
