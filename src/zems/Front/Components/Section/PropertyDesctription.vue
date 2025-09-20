@@ -1,5 +1,5 @@
 <template>
-  <div class="description">
+  <div class="description mb-1">
     <BaseTitle>Modern Apartment</BaseTitle>
     <BaseParagraph><i class="fa-solid fa-location-dot"></i> Cox's Bazar, Bangladesh</BaseParagraph>
 

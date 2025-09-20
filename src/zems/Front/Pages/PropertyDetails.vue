@@ -1,11 +1,15 @@
 <script setup>
 import GallerySection from '../Components/Section/GallerySection.vue';
 import PropertyDesctription from '../Components/Section/PropertyDesctription.vue';
+import VideoSection from '../Components/Section/VideoSection.vue';
+import BreadCrumb from '../Components/Widget/BreadCrumb.vue';
 import MapSection from '../Components/Widget/MapSection.vue';
 </script>
 
 <template>
+  <BreadCrumb />
   <div class="property-details">
+
     <div class="container">
       <div class="medium-2 large-5 gap-2">
         <div class="large-span-3">
@@ -13,7 +17,11 @@ import MapSection from '../Components/Widget/MapSection.vue';
           <GallerySection />
 
           <!-- description  -->
-<PropertyDesctription/>
+          <PropertyDesctription />
+          <div>
+            <SubTitle class="mb-1">Property Video</SubTitle>
+            <VideoSection/>
+          </div>
 
           <div>
             <SubTitle class="mb-1">Location</SubTitle>
