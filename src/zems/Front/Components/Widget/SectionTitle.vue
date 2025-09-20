@@ -11,7 +11,7 @@ defineProps({
 
 <template>
   <div class="section-title">
-    <SubTitle>{{subTitle}}</SubTitle>
+    <SubTitle>{{ subTitle }}</SubTitle>
     <BaseTitle>{{ title }}</BaseTitle>
   </div>
 </template>
@@ -19,12 +19,12 @@ defineProps({
 <style>
 .section-title .sub-title {
   display: inline-block;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--secondary-color);
   position: relative;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding: 0 1.75rem;
 }
 
 .section-title .sub-title::before,
@@ -32,7 +32,7 @@ defineProps({
   content: "";
   position: absolute;
   top: 50%;
-  width: 30px;
+  width: 20px;
   height: 2px;
   background: var(--secondary-color);
 }

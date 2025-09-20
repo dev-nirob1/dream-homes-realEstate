@@ -1,12 +1,13 @@
-<script>
-
+<script setup>
+import GallerySection from '../Components/Section/GallerySection.vue';
 </script>
 
 <template>
   <div class="property-details">
     <div class="container">
       <div class="medium-2 large-5 gap-2">
-        <div class="border large-span-3">
+        <div class="large-span-3">
+          <GallerySection />
         </div>
         <div class="border large-span-2">
           right/bottom
@@ -20,7 +21,8 @@
 .property-details {
   padding: 3.75rem 0;
 }
-.border{
+
+.border {
   border: 2px solid red;
 }
 </style>
