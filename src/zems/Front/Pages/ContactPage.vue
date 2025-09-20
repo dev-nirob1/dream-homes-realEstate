@@ -16,11 +16,23 @@ import MapSection from '../Components/Widget/MapSection.vue';
       </div>
     </div>
   </div>
-  <MapSection/>
+
+  <section class="container map-section">
+    <MapSection />
+  </section>
+
 </template>
 
 <style scoped>
 .contact {
   padding: 3.75rem 0 8rem 0;
+}
+
+.map-section {
+  position: relative;
+  margin-top: -4rem;
+  height: 400px;
+  width: 100%;
+  padding-bottom: 4rem;
 }
 </style>
