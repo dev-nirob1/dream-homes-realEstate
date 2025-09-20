@@ -20,7 +20,7 @@ import MapSection from '../Components/Widget/MapSection.vue';
           <PropertyDesctription />
           <div>
             <SubTitle class="mb-1">Property Video</SubTitle>
-            <VideoSection/>
+            <VideoSection />
           </div>
 
           <div>

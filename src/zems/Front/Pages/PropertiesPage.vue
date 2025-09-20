@@ -51,10 +51,12 @@ const properties = [
 </script>
 
 <template>
-  <BreadCrumb />
+  <BreadCrumb name="Properties"
+    image="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80" />
+
   <div class="properties">
     <div class="container">
-       <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="All Properties" />
+      <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="All Properties" />
       <div class="medium-2 large-3 gap-2">
         <PropertyCard v-for="item in properties" :item="item" :key="item.id" />
       </div>

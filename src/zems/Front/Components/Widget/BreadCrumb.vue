@@ -1,51 +1,78 @@
 <script setup>
-import { useRoute } from 'vue-router';
+import { RouterLink } from 'vue-router';
 
-const route = useRoute()
+defineProps({
+  name: {
+    type: String
+  },
+  image: {
+    type: String,
+    default: ''
+  }
+})
 </script>
 
 <template>
-  <section class="breadcrumb bg-light">
-    <ul class="container">
-      <ListItem><a href="/">Home</a></ListItem>
-      <ListItem>{{ route.name }}</ListItem>
-      <ListItem v-if="route.params.slug">{{ route.params.slug }}</ListItem>
-    </ul>
+  <section :style="{
+    backgroundImage: image
+      ? `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${image})`
+      : 'none'
+  }" class="breadcrumb">
+    <div class="container relative">
+
+      <div class="section-name">{{ name }}</div>
+      <ul>
+        <ListItem>
+          <RouterLink to="/">Home</RouterLink>
+        </ListItem>
+        <ListItem>{{ name }}</ListItem>
+      </ul>
+    </div>
   </section>
 </template>
 
 <style scoped>
 .breadcrumb {
-  padding: 3.75rem 0;
+  padding: 5rem 0 3rem;
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+}
+
+.section-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  z-index: 1;
 }
 
 .breadcrumb ul {
   font-size: 1rem;
   display: flex;
-  /* align-items: center; */
   gap: 1rem;
-  padding: 0;
 }
 
 .breadcrumb ul li a {
-  position: relative;
   text-decoration: none;
-  padding-bottom: .5rem;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .breadcrumb ul li a:hover {
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 
 .breadcrumb ul li:not(:last-child)::after {
   content: ">";
   font-family: monospace;
   padding-left: 1rem;
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {
+  .section-name {
+    font-size: 3rem;
+  }
+
   .breadcrumb ul {
     font-size: 1.25rem;
   }
