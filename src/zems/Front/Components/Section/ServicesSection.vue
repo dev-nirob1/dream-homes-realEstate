@@ -68,18 +68,19 @@ const services = [
 
 .service-card {
   position: relative;
-
+  cursor: pointer;
   background: var(--white-color);
   box-shadow: var(--box-shadow);
   margin-top: 2rem;
-
   padding: 4rem 1.5rem 1.5rem;
   border-radius: .75rem;
   text-align: center;
   transition: all 0.3s ease;
   overflow: visible;
 }
-
+.service-card:hover {
+  transform: scale(1.05);
+}
 .service-card .icon {
   position: absolute;
   top: -2.5rem;

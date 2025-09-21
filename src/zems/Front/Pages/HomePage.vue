@@ -14,9 +14,9 @@ import TestimonialSection from '../Components/Section/TestimonialSection.vue';
   <HeroSection/>
   <StatisticsSection/>
   <AboutSection/>
+  <ServicesSection/>
   <FeaturedSection/>
   <TestimonialSection/>
-  <ServicesSection/>
   <PartnerSection/>
   <CallToAction/>
 </template>

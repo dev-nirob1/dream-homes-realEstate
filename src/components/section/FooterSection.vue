@@ -79,7 +79,7 @@ import { RouterLink } from 'vue-router';
             placeholder="Enter your email"
             required
           />
-          <BaseButton type="submit">Subscribe</BaseButton>
+          <BaseButton type="submit"><i class="fa-solid fa-paper-plane"></i></BaseButton>
         </form>
       </div>
     </div>
@@ -167,12 +167,21 @@ import { RouterLink } from 'vue-router';
 
 .footer .newsletter input{
   background: var(--white-color);
-  padding: 1rem;
+  border: none;
+  border-radius:.25rem 0  0  .25rem;
+  margin: 0;
 }
 .footer .newsletter .btn{
   background: var(--primary-color);
   color: var(--white-color);
-  padding: 1rem;
+  border-radius: 0 .25rem .25rem 0;
+  border: none;
+  margin: 0;
+  padding: 1rem 1.75rem;
+}
+.newsletter-form {
+  display: flex;
+  align-items: center;
 }
 /* Footer copyright bar*/
 .footer .footer-bottom {
@@ -200,8 +209,8 @@ import { RouterLink } from 'vue-router';
   align-items: center;
   justify-content: center;
   background: var(--white-color);
+  border-radius: .25rem;
 }
-
 @media (min-width: 768px) {
   .footer .footer-bottom .flex {
     flex-direction: row;

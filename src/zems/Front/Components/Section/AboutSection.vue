@@ -1,5 +1,5 @@
 <script setup>
-import { useRoute } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 import SectionTitle from '../Widget/SectionTitle.vue';
 const route = useRoute()
 </script>
@@ -9,21 +9,21 @@ const route = useRoute()
     <div class="container">
       <div class="medium-2 gap-2">
         <!-- img container  -->
-        <div class="image">
+        <div class="image order-2 medium-order-1">
           <BaseImage class="img-1"
             image="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image" />
-          <BaseImage class="img-2"
-            image="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop"
-            alt="image" />
-
           <div class="badge">
             <SubTitle>12+ Years of Excellence</SubTitle>
             <BaseParagraph>Delivering quality home with trust and innovation</BaseParagraph>
           </div>
+          <BaseImage class="img-2"
+            image="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop"
+            alt="image" />
+
         </div>
 
-        <div class="content">
+        <div class="content order-1 medium-order-2">
           <SectionTitle class="mb-1" title="We Create Dream Homes For Everyone" subTitle="About Us" />
           <BaseParagraph>
             At DreamSpace, we believe a home is more than just walls and a roof — it’s where stories begin.
@@ -50,7 +50,7 @@ const route = useRoute()
             </ListItem>
           </ul>
 
-          <BaseButton v-if="route.name !== 'about'">Our Services</BaseButton>
+          <RouterLink to="/about" class="btn" v-if="route.name !== 'about'">Learn More</RouterLink>
         </div>
       </div>
     </div>
@@ -58,13 +58,16 @@ const route = useRoute()
 </template>
 <style scoped>
 .about {
-  padding: 3.75rem 0 5rem 0;
+  padding: 3.75rem 0;
 }
 
 .about .image {
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .about .image img {
@@ -79,6 +82,13 @@ const route = useRoute()
 .about .image .img-2 {
   height: 100%;
   width: 100%;
+}
+
+.about .badge {
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  border-radius: .5rem;
+  background: var(--white-color);
 }
 
 .about .badge .sub-title {
@@ -107,9 +117,14 @@ const route = useRoute()
   color: var(--white-color);
   border-radius: .5rem;
   padding: 1rem 1.5rem;
+  width: fit-content;
 }
 
 @media (min-width: 768px) {
+  .about {
+    padding-bottom: 9rem;
+  }
+
   .about .image .img-1 {
     width: 70%;
     height: 100%;
@@ -117,11 +132,11 @@ const route = useRoute()
 
   .about .image .img-2 {
     position: absolute;
-    bottom: -1rem;
+    bottom: -5rem;
     right: 0;
-    height: 300px;
-    width: 300px;
-    border: 2px solid var(--primary-color);
+    height: 80%;
+    width: 350px;
+    border: 2px solid var(--secondary-color);
   }
 
   .about .badge {
@@ -129,10 +144,6 @@ const route = useRoute()
     right: 1rem;
     top: 2rem;
     width: 220px;
-    padding: 1rem;
-    border-radius: .5rem;
-    background: var(--white-color);
-    box-shadow: var(--box-shadow);
   }
 }
 </style>

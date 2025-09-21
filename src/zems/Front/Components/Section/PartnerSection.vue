@@ -1,10 +1,10 @@
 <script setup>
 const logos = [
-  '/logo-header.png',
-  '/logo-header.png',
-  '/logo-header.png',
-  '/logo-header.png',
-  '/logo-header.png'
+  'https://scionassetbd.com/uploads/brands/logo.png',
+  'https://scionassetbd.com/uploads/brands/logo.png',
+  'https://scionassetbd.com/uploads/brands/logo.png',
+  'https://scionassetbd.com/uploads/brands/logo.png',
+  'https://scionassetbd.com/uploads/brands/logo.png'
 ];
 </script>
 

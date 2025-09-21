@@ -28,7 +28,7 @@ const testimonials = [
 </script>
 
 <template>
-  <section class="testimonials">
+  <section class="testimonials bg-light">
     <div class="container">
       <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="Testimonials" />
 
