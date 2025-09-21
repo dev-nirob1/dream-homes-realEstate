@@ -1,4 +1,15 @@
 <script setup>
+import VideoPlayModal from '@/components/widget/VideoPlayModal.vue';
+import { ref } from 'vue';
+
+const isModalOpen = ref(false)
+
+const handleOpenModal = () => {
+  isModalOpen.value = true
+}
+const handleCloseModal = () => {
+  isModalOpen.value = false
+}
 </script>
 
 <template>
@@ -18,11 +29,14 @@
           locations. Let us help you discover a place you’ll love to call home.
         </BaseParagraph>
         <div class="flex-center gap-2">
-          <BaseButton class="bg-secondary">Browse Properties</BaseButton>
-          <BaseButton class="btn-circle"><i class="fa-solid fa-play fa-2x"></i></BaseButton>
+          <RouterLink to="/properties" class="btn bg-secondary">Browse Properties</RouterLink>
+          <BaseButton @click="handleOpenModal" class="btn-circle"><i class="fa-solid fa-play fa-2x"></i>
+          </BaseButton>
         </div>
       </div>
     </div>
+    <!-- popup  -->
+        <VideoPlayModal :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" />
   </section>
 </template>
 
