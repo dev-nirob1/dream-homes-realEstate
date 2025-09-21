@@ -1,6 +1,7 @@
 <script setup>
 import GallerySection from '../Components/Section/GallerySection.vue';
 import PropertyDesctription from '../Components/Section/PropertyDesctription.vue';
+import PropertyFeature from '../Components/Section/PropertyFeature.vue';
 import VideoSection from '../Components/Section/VideoSection.vue';
 import BreadCrumb from '../Components/Widget/BreadCrumb.vue';
 import MapSection from '../Components/Widget/MapSection.vue';
@@ -16,9 +17,12 @@ import MapSection from '../Components/Widget/MapSection.vue';
         <div class="large-span-3">
           <!-- gallery section // todo: slider -->
           <GallerySection />
-
           <!-- description  -->
           <PropertyDesctription />
+          <div>
+            <SubTitle class="mb-1">Property Features</SubTitle>
+            <PropertyFeature />
+          </div>
           <div>
             <SubTitle class="mb-1">Property Video</SubTitle>
             <VideoSection />
@@ -31,8 +35,28 @@ import MapSection from '../Components/Widget/MapSection.vue';
           </div>
 
         </div>
-        <div class="border large-span-2">
-          right/bottom
+        <div class="px-2 right-side large-span-2">
+          <form>
+            <SubTitle class="mb-1">Message For Booking</SubTitle>
+            <InputField class="mb-1" type="text" placeholder="Your Name" required />
+            <InputField class="mb-1" type="email" placeholder="Your Email" required />
+            <BaseTextArea placeholder="Your Message" required />
+            <BaseButton class="bg-secondary">Send Message</BaseButton>
+            <div class="my-2">
+              <SubTitle class="mb-1">Follow us</SubTitle>
+              <div class="flex gap-1 items-center social-link">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#">
+                  <span class="fab fa-instagram fa-2x"></span>
+                </a>
+                <a href="#">
+                  <span class="fab fa-twitter fa-2x"></span>
+                </a>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -44,8 +68,14 @@ import MapSection from '../Components/Widget/MapSection.vue';
   padding: 3.75rem 0;
 }
 
-.border {
-  border: 2px solid red;
+form {
+  height: fit-content;
+}
+
+.right-side {
+  position: sticky;
+  top: 7rem;
+  height: fit-content;
 }
 
 .map {

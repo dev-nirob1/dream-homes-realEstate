@@ -1,8 +1,25 @@
+<script setup>
+import VideoPlayModal from '@/components/widget/VideoPlayModal.vue';
+import { ref } from 'vue'
+
+
+const isModalOpen = ref(false)
+
+const handleOpenModal = () => {
+  isModalOpen.value = true
+}
+const handleCloseModal = () => {
+  isModalOpen.value = false
+}
+</script>
+
 <template>
   <section class="video flex-center">
-    <BaseButton class="btn-circle">
+    <BaseButton @click="handleOpenModal" class="btn-circle">
       <i class="fa-solid fa-play fa-2x"></i>
     </BaseButton>
+    <!-- popup  -->
+    <VideoPlayModal :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" />
   </section>
 </template>
 
