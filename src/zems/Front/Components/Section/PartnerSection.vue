@@ -9,7 +9,7 @@ const logos = [
 </script>
 
 <template>
-  <section class="partner-section">
+  <section class="partner-section bg-light">
     <div class="marque">
       <img v-for="(logo, index) in logos" :key="index" :src="logo" alt="Partner company logo" class="logo-img" />
     </div>
@@ -22,7 +22,6 @@ const logos = [
 <style scoped>
 .partner-section {
   padding: 5rem 0;
-  background: var(--white-color);
   overflow: hidden;
   position: relative;
   display: flex;

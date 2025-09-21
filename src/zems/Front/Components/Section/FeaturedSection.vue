@@ -50,7 +50,7 @@ const properties = [
 </script>
 
 <template>
-  <section class="featured-properties">
+  <section class="featured-properties bg-light">
     <div class="container">
       <SectionTitle class="mb-2" title="Find Your Dream Home" subTitle="Featured Properties"/>
 

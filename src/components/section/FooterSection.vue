@@ -74,11 +74,7 @@ import { RouterLink } from 'vue-router';
           Subscribe to get the latest property updates, offers, and real estate insights.
         </BaseParagraph>
         <form class="newsletter-form">
-          <InputField
-            type="email"
-            placeholder="Enter your email"
-            required
-          />
+          <InputField type="email" placeholder="Enter your email" required />
           <BaseButton type="submit"><i class="fa-solid fa-paper-plane"></i></BaseButton>
         </form>
       </div>
@@ -87,7 +83,8 @@ import { RouterLink } from 'vue-router';
     <!-- Footer bottom copyright -->
     <div class="footer-bottom">
       <div class="container flex">
-        <BaseParagraph>{{ new Date().getFullYear() }} &copy; All rights reserved by RealEstate, Bangladesh</BaseParagraph>
+        <BaseParagraph>{{ new Date().getFullYear() }} &copy; All rights reserved by RealEstate, Bangladesh
+        </BaseParagraph>
         <div class="social-icon">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-facebook-f"></i>
@@ -165,13 +162,14 @@ import { RouterLink } from 'vue-router';
   transition: all 0.3s ease;
 }
 
-.footer .newsletter input{
+.footer .newsletter input {
   background: var(--white-color);
   border: none;
-  border-radius:.25rem 0  0  .25rem;
+  border-radius: .25rem 0 0 .25rem;
   margin: 0;
 }
-.footer .newsletter .btn{
+
+.footer .newsletter .btn {
   background: var(--primary-color);
   color: var(--white-color);
   border-radius: 0 .25rem .25rem 0;
@@ -179,10 +177,12 @@ import { RouterLink } from 'vue-router';
   margin: 0;
   padding: 1rem 1.75rem;
 }
+
 .newsletter-form {
   display: flex;
   align-items: center;
 }
+
 /* Footer copyright bar*/
 .footer .footer-bottom {
   padding: .5rem;
@@ -211,6 +211,7 @@ import { RouterLink } from 'vue-router';
   background: var(--white-color);
   border-radius: .25rem;
 }
+
 @media (min-width: 768px) {
   .footer .footer-bottom .flex {
     flex-direction: row;
