@@ -41,13 +41,13 @@ import { RouterLink } from 'vue-router';
             <RouterLink to="/properties">All Properties</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/agents">Our Agents</RouterLink>
+            <RouterLink to="">Our Agents</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/blogs">Blog</RouterLink>
+            <RouterLink to="">Blog</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/contact-us">Contact Us</RouterLink>
+            <RouterLink to="/contact">Contact Us</RouterLink>
           </ListItem>
         </ul>
       </div>
@@ -57,19 +57,19 @@ import { RouterLink } from 'vue-router';
         <SubTitle>Resources</SubTitle>
         <ul class="footer-links">
           <ListItem>
-            <RouterLink to="/buying-guide">Buyer’s Guide</RouterLink>
+            <RouterLink to="">Buyer’s Guide</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/selling-guide">Seller’s Guide</RouterLink>
+            <RouterLink to="">Seller’s Guide</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/faq">FAQ</RouterLink>
+            <RouterLink to="">FAQ</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/privacy-policy">Privacy Policy</RouterLink>
+            <RouterLink to="">Privacy Policy</RouterLink>
           </ListItem>
           <ListItem>
-            <RouterLink to="/terms">Terms & Conditions</RouterLink>
+            <RouterLink to="">Terms & Conditions</RouterLink>
           </ListItem>
         </ul>
       </div>
@@ -111,7 +111,8 @@ import { RouterLink } from 'vue-router';
   gap: 1rem;
   font-size: 1.5rem;
 }
-.footer .social-links a{
+
+.footer .social-links a {
   border-radius: .25rem;
   background: var(--white-color);
   color: var(--secondary-color);
@@ -172,14 +173,14 @@ import { RouterLink } from 'vue-router';
 
 .footer .newsletter-form input {
   background: var(--white-color);
-  border-radius: .5rem 0 0 .5rem;
+  border-radius: .25rem 0 0 .25rem;
   margin: 0;
 }
 
 .footer .newsletter-form .btn {
   padding: 1rem 2rem;
   background: var(--secondary-color);
-  border-radius: 0 .5rem .5rem 0;
+  border-radius: 0 .25rem .25rem 0;
 }
 
 .footer-bottom {
@@ -188,119 +189,3 @@ import { RouterLink } from 'vue-router';
   background: rgb(from var(--primary-color)r g b / 5%);
 }
 </style>
-
-<!-- <style scoped>
-.footer {
-  color: var(--white-color);
-  padding-top: 3rem;
-}
-
-.footer .logo img {
-  height: 70px;
-  width: auto;
-}
-
-.footer .sub-title {
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 0.75rem;
-}
-
-.footer .sub-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 2rem;
-  height: 1px;
-  background-color: var(--white-color);
-}
-
-.footer .contact-info {
-  font-size: 1rem;
-}
-
-.footer .contact-info ul {
-  gap: .5rem;
-}
-
-.footer .contact-info span {
-  color: var(--highlight-color);
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.footer ul a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.footer ul a::before {
-  content: ">";
-  font-family: monospace;
-  transition: all 0.3s ease;
-}
-
-.footer .newsletter input {
-  background: var(--white-color);
-  border: none;
-  border-radius: .25rem 0 0 .25rem;
-  margin: 0;
-}
-
-.footer .newsletter .btn {
-  background: var(--primary-color);
-  color: var(--white-color);
-  border-radius: 0 .25rem .25rem 0;
-  border: none;
-  margin: 0;
-  padding: 1rem 1.75rem;
-}
-
-.newsletter-form {
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-bottom {
-  padding: .5rem;
-  font-weight: 600;
-}
-
-.footer .footer-bottom .flex {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-bottom .social-icon {
-  display: flex;
-  gap: .5rem;
-  color: var(--dark-color);
-}
-
-.footer-bottom a {
-  height: 2rem;
-  width: 2rem;
-  font-size: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--white-color);
-  border-radius: .25rem;
-}
-
-@media (min-width: 768px) {
-  .footer .footer-bottom .flex {
-    flex-direction: row;
-  }
-}
-</style> -->

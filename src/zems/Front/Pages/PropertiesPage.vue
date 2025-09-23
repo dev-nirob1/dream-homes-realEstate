@@ -56,7 +56,23 @@ const properties = [
 
   <div class="properties">
     <div class="container">
-      <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="All Properties" />
+      <div class="flex align-center justify-between medium gap-1">
+        <SectionTitle class="mb-2 flex-1" title="What Our Clients Say" subTitle="All Properties" />
+        <SelectDropdown>
+          <option disabled>
+            Select One
+          </option>
+          <option value="completed">
+            Completed
+          </option>
+          <option value="ongoing">
+            Ongoing
+          </option>
+          <option value="upcoming">
+            upcoming
+          </option>
+        </SelectDropdown>
+      </div>
       <div class="medium-2 large-3 gap-2">
         <PropertyCard v-for="item in properties" :item="item" :key="item.id" />
       </div>
@@ -66,5 +82,19 @@ const properties = [
 <style scoped>
 .properties {
   padding: 3.75rem 0;
+}
+
+.properties .flex {
+  flex-direction: column;
+  justify-content: start;
+
+}
+
+@media (min-width: 768px) {
+  .properties .flex {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
 }
 </style>
