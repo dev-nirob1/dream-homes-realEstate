@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 <template>
   <!-- ======== Footer section ======== -->
   <footer class="footer bg-dark text-white">
-    <div class="container medium-2 large-4 gap-2 py-1 medium-py-3">
+    <div class="container medium-2 large-4 gap-2 py-1 medium-py-4">
       <!-- Footer logo and contact info -->
       <div class="contact-info">
         <RouterLink to="/" class="logo">
@@ -16,11 +16,18 @@ import { RouterLink } from 'vue-router';
           From dream homes to investment properties, we make every transaction simple and transparent.
         </BaseParagraph>
 
-        <ul>
-          <ListItem><span>Office: </span>House 45, Road 12, Gulshan 2, Dhaka</ListItem>
-          <ListItem><span>Email: </span>support@realestate.com</ListItem>
-          <ListItem><span>Phone: </span>+880 1234-567890</ListItem>
-        </ul>
+        <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/8801234567890" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
       </div>
 
       <!-- Quick navigation links -->
@@ -82,21 +89,9 @@ import { RouterLink } from 'vue-router';
 
     <!-- Footer bottom copyright -->
     <div class="footer-bottom">
-      <div class="container flex">
-        <BaseParagraph>{{ new Date().getFullYear() }} &copy; All rights reserved by RealEstate, Bangladesh
-        </BaseParagraph>
-        <div class="social-icon">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/8801234567890" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
+      <BaseParagraph>{{ new Date().getFullYear() }} &copy; All rights reserved by RealEstate, Bangladesh
+      </BaseParagraph>
+
     </div>
   </footer>
 </template>
@@ -104,10 +99,102 @@ import { RouterLink } from 'vue-router';
 <style scoped>
 .footer {
   color: var(--white-color);
+}
+
+.footer .logo img {
+  height: 70px;
+  width: auto;
+}
+
+.footer .social-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+.footer .social-links a{
+  border-radius: .25rem;
+  background: var(--white-color);
+  color: var(--secondary-color);
+  padding: 0 .75rem;
+}
+
+.footer .sub-title {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer .sub-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background: var(--secondary-color);
+}
+
+.footer ul li {
+  margin: .75rem 0;
+}
+
+.footer ul li a {
+  padding: .25rem 0;
+  position: relative;
+}
+
+.footer ul li a::before {
+  content: '➔';
+  position: absolute;
+  left: -1rem;
+  visibility: hidden;
+  opacity: 0;
+  color: var(--white-color);
+  transition: all .3s ease-in-out;
+}
+
+.footer ul li a:hover::before {
+  left: 0;
+  opacity: 1;
+  color: var(--secondary-color);
+  visibility: visible;
+}
+
+.footer ul li a:hover {
+  color: var(--secondary-color);
+  padding-left: 1.25rem;
+}
+
+.footer .newsletter-form {
+  display: flex;
+  align-items: center;
+}
+
+.footer .newsletter-form input {
+  background: var(--white-color);
+  border-radius: .5rem 0 0 .5rem;
+  margin: 0;
+}
+
+.footer .newsletter-form .btn {
+  padding: 1rem 2rem;
+  background: var(--secondary-color);
+  border-radius: 0 .5rem .5rem 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  background: rgb(from var(--primary-color)r g b / 5%);
+}
+</style>
+
+<!-- <style scoped>
+.footer {
+  color: var(--white-color);
   padding-top: 3rem;
 }
 
-/* Logo Styles */
 .footer .logo img {
   height: 70px;
   width: auto;
@@ -183,7 +270,6 @@ import { RouterLink } from 'vue-router';
   align-items: center;
 }
 
-/* Footer copyright bar*/
 .footer .footer-bottom {
   padding: .5rem;
   font-weight: 600;
@@ -217,4 +303,4 @@ import { RouterLink } from 'vue-router';
     flex-direction: row;
   }
 }
-</style>
+</style> -->
