@@ -58,14 +58,14 @@ defineProps({
 }
 
 .breadcrumb ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .breadcrumb ul li:not(:last-child)::after {
   content: ">";
   font-family: monospace;
   padding-left: 1rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 @media (min-width: 768px) {

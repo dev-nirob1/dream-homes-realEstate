@@ -12,10 +12,10 @@ html {
   --body-font: 'Cabin', sans-serif;
   --heading-font: 'Quicksand', serif;
 
-  --primary-color: #1e3a8a;
+  --primary-color: #FF792D;
   --secondary-color: #38bdf8;
   --white-color: #ffffff;
-  --dark-color: #111827;
+  --dark-color: #000000;
   --light-color: #6c757d;
   --border-color: #dee2e6;
   /* ---------------typography------------ */
@@ -172,7 +172,7 @@ ul {
   border-radius: 50%;
   background: var(--white-color);
   color: rgb(from var(--dark-color)r g b / 90%);
-  animation: ripple 2s infinite;
+  animation: ripple 1s infinite;
 }
 
 @keyframes ripple {

@@ -117,7 +117,7 @@ onMounted(() => {
 .hamburger {
   height: 2rem;
   width: 2rem;
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .desktop {
@@ -140,7 +140,7 @@ onMounted(() => {
   }
 
   li a.router-link-exact-active {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     border-radius: .25rem;
   }
 

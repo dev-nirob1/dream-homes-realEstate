@@ -34,7 +34,7 @@
 }
 
 .gallery .thumbs .active-thumb {
-  border: 3px solid var(--secondary-color);
+  border: 3px solid var(--primary-color);
 }
 
 .gallery .thumbs img {

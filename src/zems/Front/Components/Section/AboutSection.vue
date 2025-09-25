@@ -113,7 +113,7 @@ const route = useRoute()
 }
 
 .about .btn {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--white-color);
   border-radius: .5rem;
   padding: 1rem 1.5rem;
@@ -136,7 +136,7 @@ const route = useRoute()
     right: 0;
     height: 80%;
     width: 350px;
-    border: 2px solid var(--secondary-color);
+    border: 10px solid var(--white-color);
   }
 
   .about .badge {

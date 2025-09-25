@@ -61,7 +61,7 @@ defineProps({
 .properties-card .btn {
   padding: .75rem 1rem;
   color: var(--white-color);
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: .5rem;
 }
 

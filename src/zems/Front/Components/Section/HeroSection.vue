@@ -76,7 +76,7 @@ const handleCloseModal = () => {
 .hero .content .btn.bg-secondary {
   padding: 1.25rem 2rem;
   border-radius: .5rem;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--white-color);
   font-size: 1.1rem;
 }
@@ -84,7 +84,7 @@ const handleCloseModal = () => {
 .hero .image {
   height: 60%;
   width: 80%;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .hero .image img {

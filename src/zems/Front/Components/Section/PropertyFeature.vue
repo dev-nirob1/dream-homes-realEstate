@@ -91,7 +91,7 @@ li p{
 }
 li i{
     font-size: 1.25rem;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: var(--white-color);
     height: 2.5rem;
     width: 2.5rem;

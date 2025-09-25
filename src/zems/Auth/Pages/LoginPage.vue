@@ -34,7 +34,7 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 .login a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 .login .image {
   width: 100%;

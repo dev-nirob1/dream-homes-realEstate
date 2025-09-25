@@ -24,7 +24,7 @@
 .call-to-action .btn {
   padding: 1rem 1.5rem;
   border-radius: .5rem;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--white-color);
 }
 

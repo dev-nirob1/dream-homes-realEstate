@@ -22,7 +22,7 @@ defineProps({
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   position: relative;
   padding: 0 1.75rem;
 }
@@ -34,7 +34,7 @@ defineProps({
   top: 50%;
   width: 20px;
   height: 2px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .section-title .sub-title::before {

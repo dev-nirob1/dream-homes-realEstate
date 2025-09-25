@@ -115,7 +115,7 @@ import { RouterLink } from 'vue-router';
 .footer .social-links a {
   border-radius: .25rem;
   background: var(--white-color);
-  color: var(--secondary-color);
+  color: var(--primary-color);
   padding: 0 .75rem;
 }
 
@@ -132,7 +132,7 @@ import { RouterLink } from 'vue-router';
   bottom: 0;
   height: 2px;
   width: 50px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .footer ul li {
@@ -157,12 +157,12 @@ import { RouterLink } from 'vue-router';
 .footer ul li a:hover::before {
   left: 0;
   opacity: 1;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   visibility: visible;
 }
 
 .footer ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   padding-left: 1.25rem;
 }
 
@@ -179,7 +179,7 @@ import { RouterLink } from 'vue-router';
 
 .footer .newsletter-form .btn {
   padding: 1rem 2rem;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: 0 .25rem .25rem 0;
 }
 

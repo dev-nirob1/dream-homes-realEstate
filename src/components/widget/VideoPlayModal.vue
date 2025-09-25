@@ -53,7 +53,7 @@ defineProps({
   position: absolute;
   top: 0;
   right: 0.5rem;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border: none;
   color: var(--white-color);
   padding: 0.5rem .75rem;

@@ -61,7 +61,7 @@ import SectionTitle from '../Widget/SectionTitle.vue';
     background-color: var(--white-color);
     border-radius: .75rem;
     padding: .75rem 0 .75rem 1rem;
-    border-left: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--primary-color);
     margin-bottom: 1rem;
     box-shadow: var(--box-shadow);
 }
