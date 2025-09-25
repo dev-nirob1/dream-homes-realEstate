@@ -47,7 +47,7 @@ onMounted(() => {
 
         <div class="desktop">
           <RouterLink to="/login"><i class="fa-solid fa-user"></i></RouterLink>
-          <RouterLink class="btn bg-secondary" to="/login">Add Property</RouterLink>
+          <RouterLink class="btn bg-primary" to="/login">Add Property</RouterLink>
         </div>
 
         <div @click="handleHamburger" class="hamburger flex-center">

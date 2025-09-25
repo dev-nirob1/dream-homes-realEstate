@@ -13,7 +13,7 @@ html {
   --heading-font: 'Quicksand', serif;
 
   --primary-color: #FF792D;
-  --secondary-color: #38bdf8;
+  /* --secondary-color: #38bdf8; */
   --white-color: #ffffff;
   --dark-color: #000000;
   --light-color: #6c757d;
@@ -88,7 +88,7 @@ img {
 
 /* colors   */
 .bg-light {
-  background-color: rgb(from var(--primary-color) r g b / 5%);
+  background-color: rgb(from var(--dark-color) r g b / 5%);
 }
 .bg-primary {
   background-color: var(--primary-color);

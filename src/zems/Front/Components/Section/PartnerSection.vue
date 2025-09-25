@@ -11,10 +11,10 @@ const logos = [
 <template>
   <section class="partner-section bg-light">
     <div class="marque">
-      <img v-for="(logo, index) in logos" :key="index" :src="logo" alt="Partner company logo" class="logo-img" />
+      <BaseImage v-for="(logo, index) in logos" :key="index" :image="logo" alt="Partner company logo" class="logo-img" />
     </div>
     <div class="marque">
-      <img v-for="(logo, index) in logos" :key="index" :src="logo" alt="Partner company logo" class="logo-img" />
+      <BaseImage v-for="(logo, index) in logos" :key="index" :image="logo" alt="Partner company logo" class="logo-img" />
     </div>
   </section>
 </template>
