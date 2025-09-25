@@ -1,31 +1,78 @@
 <script setup>
+import { card_slider } from '@/plugins/Sliders';
 import SectionTitle from '../Widget/SectionTitle.vue';
 import TestimonialCard from '../Widget/TestimonialCard.vue';
+import { onMounted } from 'vue';
 
 const testimonials = [
   {
     id: 1,
     name: "Sarah Khan",
     role: "Homeowner",
-    message: "Buying my dream villa here was the best decision. The team made everything smooth and easy!",
+    review: "Buying my dream villa here was a wonderful decision. The helpful team made the entire process smooth and easy.",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg"
   },
-
   {
     id: 2,
     name: "Jahid Hossain",
     role: "Investor",
-    message: "Professional service and amazing properties. I’m very impressed with their attention to detail.",
+    review: "Professional service and outstanding properties. I was truly impressed with their dedication, attention to detail, and clear communication.",
     avatar: "https://randomuser.me/api/portraits/men/45.jpg"
   },
   {
     id: 3,
     name: "Nabila Rahman",
     role: "Tenant",
-    message: "I found the perfect apartment in just a week! Highly recommend them for hassle-free renting.",
+    review: "I found the perfect apartment within a week. Their reliable team made renting easy, comfortable, and completely stress free.",
     avatar: "https://randomuser.me/api/portraits/women/56.jpg"
   },
+  {
+    id: 4,
+    name: "Imran Chowdhury",
+    role: "First-time Buyer",
+    review: "As a first-time buyer, I was nervous, but their team guided me with patience, care, and complete professionalism throughout.",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    id: 5,
+    name: "Farzana Ahmed",
+    role: "Landlord",
+    review: "They found reliable tenants for my property quickly. The process was transparent, straightforward, and I felt fully supported the whole time.",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    id: 6,
+    name: "Rafiq Karim",
+    role: "Investor",
+    review: "Their market knowledge is outstanding. I received excellent advice, profitable opportunities, and complete confidence with my property investment decisions.",
+    avatar: "https://randomuser.me/api/portraits/men/28.jpg"
+  },
+  {
+    id: 7,
+    name: "Maya Sultana",
+    role: "Tenant",
+    review: "Securing my rental home was quick and stress free. The friendly staff explained everything clearly and made the process enjoyable.",
+    avatar: "https://randomuser.me/api/portraits/women/22.jpg"
+  },
+  {
+    id: 8,
+    name: "Tanvir Alam",
+    role: "Homeowner",
+    review: "They listened to my needs carefully and matched me with the perfect home. The entire experience was smooth, professional, and reassuring.",
+    avatar: "https://randomuser.me/api/portraits/men/50.jpg"
+  },
+  {
+    id: 9,
+    name: "Samira Niaz",
+    role: "Buyer",
+    review: "I am thrilled with my new property purchase. The expert guidance and honest advice gave me peace of mind and confidence.",
+    avatar: "https://randomuser.me/api/portraits/women/15.jpg"
+  }
 ];
+
+onMounted(()=> {
+  card_slider()
+})
 </script>
 
 <template>
@@ -49,12 +96,12 @@ const testimonials = [
   padding: 3.75rem 0;
 }
 
-.card-slider{
+.card-slider {
   position: relative;
   display: flex;
   gap: 2rem;
   transition: transform .5s ease-in-out;
-  overflow-x: hidden;
+  overflow-x: scroll;
   padding: 2rem 0;
 }
 
@@ -65,9 +112,11 @@ const testimonials = [
   transform: translateY(-50%);
   background: var(--primary-color);
 }
+
 .next {
   right: 0;
 }
+
 .prev {
   left: 0;
 }

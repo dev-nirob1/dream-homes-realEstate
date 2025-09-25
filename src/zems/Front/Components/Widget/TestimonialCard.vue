@@ -10,7 +10,7 @@ defineProps({
     <i class="fa-solid fa-quote-left fa-2x"></i>
     <div class="flex">
       <BaseParagraph>
-        {{ review.message }}
+        {{ review.review }}
       </BaseParagraph>
     </div>
     <div class="flex align-center gap-1">
