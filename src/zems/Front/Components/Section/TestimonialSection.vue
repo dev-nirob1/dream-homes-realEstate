@@ -78,8 +78,8 @@ onMounted(() => {
 <template>
   <section class="testimonials">
     <div class="container">
-      <div class="flex justify-between gap-2">
-        <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="Testimonials" />
+      <div class="flex flex-wrap justify-between align-center medium-gap-2 mb-2">
+        <SectionTitle title="What Our Clients Say" subTitle="Testimonials" />
         <div class="flex gap-1">
           <BaseButton class="prev"><i class="fa-solid fa-arrow-left"></i></BaseButton>
           <BaseButton class="next"><i class="fa-solid fa-arrow-right"></i></BaseButton>

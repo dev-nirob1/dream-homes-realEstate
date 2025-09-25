@@ -40,8 +40,8 @@ defineProps({
 
 .modal-content {
   position: relative;
-  height: 70vh;
-  width: 80%;
+  height: 60vh;
+  width: 90%;
   aspect-ratio: 16 / 9;
   border-radius: 1rem;
   overflow: hidden;
@@ -67,10 +67,11 @@ iframe {
   height: 100%;
   border: none;
 }
-@media (min-width: 768px){
-  .modal-content {
-  height: 80vh;
-  width: 60vw;}
-}
 
+@media (min-width: 768px) {
+  .modal-content {
+    height: 80vh;
+    width: 60vw;
+  }
+}
 </style>

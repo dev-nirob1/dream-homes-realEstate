@@ -98,6 +98,12 @@ import { RouterLink } from 'vue-router';
 <style scoped>
 .footer {
   color: var(--white-color);
+    background:
+    linear-gradient(
+      rgb(from var(--dark-color) r g b / 97%),
+      rgb(from var(--dark-color) r g b / 97%)
+    ),
+    url('https://cdn.pixabay.com/photo/2023/04/12/00/08/lineart-7918516_1280.jpg') center / cover no-repeat;
 }
 
 .footer .logo img {

@@ -36,7 +36,7 @@ const handleCloseModal = () => {
       </div>
     </div>
     <!-- popup  -->
-        <VideoPlayModal :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" />
+    <VideoPlayModal :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" />
   </section>
 </template>
 

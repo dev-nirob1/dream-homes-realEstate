@@ -3,7 +3,6 @@ import { ref } from 'vue';
 
 const images = [
   'https://tunatheme.com/tf/html/quarter-preview/quarter/img/service/31.jpg',
-  'https://tunatheme.com/tf/html/quarter-preview/quarter/img/service/31.jpg',
   'https://tunatheme.com/tf/html/quarter-preview/quarter/img/img-slide/31.jpg',
   'https://tunatheme.com/tf/html/quarter-preview/quarter/img/img-slide/33.jpg',
   'https://tunatheme.com/tf/html/quarter-preview/quarter/img/img-slide/34.jpg'
