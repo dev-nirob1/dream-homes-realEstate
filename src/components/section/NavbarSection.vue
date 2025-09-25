@@ -140,8 +140,7 @@ onMounted(() => {
   }
 
   li a.router-link-exact-active {
-    background: var(--primary-color);
-    border-radius: .25rem;
+    color: var(--primary-color);
   }
 
   .desktop {
@@ -151,10 +150,12 @@ onMounted(() => {
     gap: 1rem;
     color: var(--white-color);
   }
+
   .desktop a i {
     font-size: 1.25rem;
     padding: .5rem;
   }
+
   .desktop .btn {
     padding: .75rem 1rem;
     border-radius: .5rem;

@@ -75,12 +75,30 @@ const services = [
   padding: 4rem 1.5rem 1.5rem;
   border-radius: .75rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out;
   overflow: visible;
 }
-.service-card:hover {
-  transform: scale(1.05);
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: .75rem;
+  background: var(--dark-color);
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  z-index: -1;
 }
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  color: var(--white-color);
+  z-index: 4;
+}
+
 .service-card .icon {
   position: absolute;
   top: -2.5rem;
@@ -91,5 +109,6 @@ const services = [
   border-radius: 50%;
   color: var(--white-color);
   background: var(--primary-color);
+  z-index: 3;
 }
 </style>

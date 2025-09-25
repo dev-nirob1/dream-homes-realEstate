@@ -56,8 +56,8 @@ const properties = [
 
   <div class="properties">
     <div class="container">
-      <div class="flex align-center justify-between medium gap-1">
-        <SectionTitle class="mb-2 flex-1" title="What Our Clients Say" subTitle="All Properties" />
+      <div class="flex flex-wrap align-center justify-between medium-gap-2 mb-2">
+        <SectionTitle class="mb-1" title="What Our Clients Say" subTitle="All Properties" />
         <SelectDropdown>
           <option disabled>
             Select One
