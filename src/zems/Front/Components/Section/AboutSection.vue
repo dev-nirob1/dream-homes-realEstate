@@ -18,7 +18,7 @@ const route = useRoute()
             <BaseParagraph>Delivering quality home with trust and innovation</BaseParagraph>
           </div>
           <BaseImage class="img-2"
-            image="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop"
+            image="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image" />
 
         </div>
@@ -45,7 +45,7 @@ const route = useRoute()
               Modern Bathrooms
             </ListItem>
             <ListItem>
-              <i class="fas fa-garage"></i>
+              <i class="fa-solid fa-car"></i>
               Parking Space
             </ListItem>
           </ul>
@@ -85,6 +85,7 @@ const route = useRoute()
 }
 
 .about .badge {
+  z-index: 1;
   box-shadow: var(--box-shadow);
   padding: 1rem;
   border-radius: .5rem;

@@ -27,7 +27,7 @@ import { RouterLink } from 'vue-router';
             Confirm Password
             <InputField type="password" placeholder="Re-enter Password" required />
           </label>
-          <BaseButton class="width-full bg-secondary">Login</BaseButton>
+          <BaseButton class="width-full bg-primary">Login</BaseButton>
         </form>
         <div class="text-center">
           <SubTitle class="mt-2">Already Have An Account?</SubTitle>

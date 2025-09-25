@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router';
             Your Password
             <InputField type="password" placeholder="Enter your password" required />
           </label>
-          <BaseButton class="width-full bg-secondary">Login</BaseButton>
+          <BaseButton class="width-full bg-primary">Login</BaseButton>
         </form>
         <RouterLink class="text-right" to="">Forgotten Your Password</RouterLink>
         <div class="text-center">

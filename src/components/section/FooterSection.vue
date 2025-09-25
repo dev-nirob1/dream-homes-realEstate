@@ -91,7 +91,6 @@ import { RouterLink } from 'vue-router';
     <div class="footer-bottom">
       <BaseParagraph>{{ new Date().getFullYear() }} &copy; All rights reserved by RealEstate, Bangladesh
       </BaseParagraph>
-
     </div>
   </footer>
 </template>
@@ -184,7 +183,7 @@ import { RouterLink } from 'vue-router';
 
 .footer-bottom {
   text-align: center;
-  padding: 1rem;
-  background: rgb(from var(--primary-color)r g b / 5%);
+  padding: .75rem;
+  border-top: 1px solid var(--border-color);
 }
 </style>
