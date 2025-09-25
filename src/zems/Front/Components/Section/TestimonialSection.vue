@@ -10,6 +10,7 @@ const testimonials = [
     message: "Buying my dream villa here was the best decision. The team made everything smooth and easy!",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg"
   },
+
   {
     id: 2,
     name: "Jahid Hossain",
@@ -32,8 +33,11 @@ const testimonials = [
     <div class="container">
       <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="Testimonials" />
 
-      <div class="medium-2 large-3 gap-2">
+      <div class="card-slider">
+        <BaseButton class="prev">Prev</BaseButton>
         <TestimonialCard v-for="review in testimonials" :review="review" :key="review.id" />
+        <BaseButton class="next">Next</BaseButton>
+
       </div>
 
     </div>
@@ -43,5 +47,28 @@ const testimonials = [
 <style scoped>
 .testimonials {
   padding: 3.75rem 0;
+}
+
+.card-slider{
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  transition: transform .5s ease-in-out;
+  overflow-x: hidden;
+  padding: 2rem 0;
+}
+
+.card-slider .next,
+.card-slider .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+}
+.next {
+  right: 0;
+}
+.prev {
+  left: 0;
 }
 </style>

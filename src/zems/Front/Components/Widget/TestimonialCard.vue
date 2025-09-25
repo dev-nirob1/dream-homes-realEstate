@@ -28,15 +28,19 @@ defineProps({
   border-radius: .75rem;
   padding: 2rem 1.5rem;
   background: var(--white-color);
-  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+  flex: 0 0 100%;
 }
-.testimonial-card i{
+
+.testimonial-card i {
   color: var(--primary-color);
 }
+
 .testimonial-card p {
   font-style: italic;
   margin-top: .5rem;
 }
+
 .testimonial-card img {
   height: 4rem;
   width: 4rem;
@@ -44,4 +48,15 @@ defineProps({
   object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-card {
+    flex: 0 0 calc(33.3% - 1.3rem);
+  }
+}
 </style>
