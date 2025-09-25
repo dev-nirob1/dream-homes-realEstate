@@ -70,7 +70,7 @@ const testimonials = [
   }
 ];
 
-onMounted(()=> {
+onMounted(() => {
   card_slider()
 })
 </script>
@@ -78,13 +78,16 @@ onMounted(()=> {
 <template>
   <section class="testimonials">
     <div class="container">
-      <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="Testimonials" />
+      <div class="flex justify-between gap-2">
+        <SectionTitle class="mb-2" title="What Our Clients Say" subTitle="Testimonials" />
+        <div class="flex gap-1">
+          <BaseButton class="prev"><i class="fa-solid fa-arrow-left"></i></BaseButton>
+          <BaseButton class="next"><i class="fa-solid fa-arrow-right"></i></BaseButton>
+        </div>
+      </div>
 
       <div class="card-slider">
-        <BaseButton class="prev">Prev</BaseButton>
         <TestimonialCard v-for="review in testimonials" :review="review" :key="review.id" />
-        <BaseButton class="next">Next</BaseButton>
-
       </div>
 
     </div>
@@ -101,16 +104,25 @@ onMounted(()=> {
   display: flex;
   gap: 2rem;
   transition: transform .5s ease-in-out;
-  overflow-x: scroll;
+  overflow-x: hidden;
   padding: 2rem 0;
 }
 
-.card-slider .next,
-.card-slider .prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.next,
+.prev {
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  color: var(--light-color);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.next:hover,
+.prev:hover {
   background: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
 }
 
 .next {

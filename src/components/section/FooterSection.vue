@@ -150,7 +150,6 @@ import { RouterLink } from 'vue-router';
   left: -1rem;
   visibility: hidden;
   opacity: 0;
-  color: var(--white-color);
   transition: all .3s ease-in-out;
 }
 

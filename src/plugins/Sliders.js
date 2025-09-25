@@ -1,32 +1,45 @@
 export const card_slider = () => {
-  const card_slider = document.querySelector('.card-slider')
-  const prev = document.querySelector('.prev')
-  const next = document.querySelector('.next')
-  let index = 0
+  // DOM Element Selectors
+  const cardList = document.querySelectorAll(".testimonial-card");
+  const cardContainer = document.querySelector(".card-slider");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
 
-  const totalCards = card_slider.children.length
+  // card width including margin
+  let cardIndex = 0;
+  const cardWidth = cardList[0].offsetWidth + 32;
 
-  const getCardWidth = () => {
-    const card = card_slider.children[0]
-    const style = getComputedStyle(card)
-    return card.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight)
-  }
+  // Next Button Click Handler
+  nextBtn.addEventListener("click", () => {
+    // calculation for clone
+    const cloneIndex = cardIndex % cardList.length;
 
-  const updateCarousel = () => {
-    const cardWidth = getCardWidth()
-    card_slider.style.transform = `translateX(${-index * cardWidth}px)`
-  }
+    if (cardIndex <= cardList.length - 1) {
+      // Clone the card and append
+      const lastCard = cardList[cloneIndex].cloneNode(true);
+      cardContainer.appendChild(lastCard);
 
-  next.addEventListener('click', () => {
-    index = (index + 1) % totalCards
-    updateCarousel()
-  })
+      // Scroll to next position
+      cardContainer.scrollTo({
+        left: cardWidth * (cardIndex + 1),
+        behavior: "smooth",
+      });
+    }
+    // Increment position counter
+    cardIndex++;
+  });
 
-  prev.addEventListener('click', () => {
-    index = (index - 1 + totalCards) % totalCards
-    updateCarousel()
-  })
-
-  window.addEventListener('resize', updateCarousel)
-  window.addEventListener('load', updateCarousel)
-}
+  // Previous Button Click Handler
+  prevBtn.addEventListener("click", () => {
+    // Only go back if not at first card
+    if (cardIndex > 0) {
+      // Decrement position counter
+      cardIndex--;
+      // Scroll to previous position
+      cardContainer.scrollTo({
+        left: cardWidth * cardIndex,
+        behavior: "smooth",
+      });
+    }
+  });
+};

@@ -54,9 +54,4 @@ defineProps({
   }
 }
 
-@media (min-width: 992px) {
-  .testimonial-card {
-    flex: 0 0 calc(33.3% - 1.3rem);
-  }
-}
 </style>
