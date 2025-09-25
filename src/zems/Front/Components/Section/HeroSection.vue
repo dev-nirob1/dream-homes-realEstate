@@ -62,7 +62,7 @@ const handleCloseModal = () => {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: radial-gradient(circle, rgb(from var(--dark-color)r g b / 15%), rgb(from var(--primary-color)r g b / 15%));
   text-align: center;
 }
 
