@@ -62,8 +62,6 @@ const route = useRoute()
 }
 
 .about .image {
-  width: 100%;
-  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -74,15 +72,13 @@ const route = useRoute()
   object-fit: cover;
 }
 
-.about .image .img-1 {
+.about .image .img-1,
+.about .image .img-1
+ {
   width: 100%;
   height: 100%;
 }
 
-.about .image .img-2 {
-  height: 100%;
-  width: 100%;
-}
 
 .about .badge {
   z-index: 1;

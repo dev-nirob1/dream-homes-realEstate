@@ -41,16 +41,6 @@
   padding: 3.75rem 0;
 }
 
-.vision-mision .image {
-  width: 100%;
-  height: 100%;
-}
-
-.vision-mision .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .vision-mision .content {
   padding: 2rem 1rem;

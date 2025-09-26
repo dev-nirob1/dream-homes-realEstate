@@ -12,7 +12,7 @@ html {
   --body-font: 'Cabin', sans-serif;
   --heading-font: 'Quicksand', serif;
 
-  --primary-color: #FF792D;
+  --primary-color: #ff792d;
   /* --secondary-color: #38bdf8; */
   --white-color: #ffffff;
   --dark-color: #000000;
@@ -80,9 +80,18 @@ a {
   text-decoration: none;
   display: inline-block;
   color: inherit;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.image {
+  height: 100%;
+  width: 100%;
+}
+.image img {
+  width: 100%;
+  height: 100%;
 }
 img {
+  object-fit: cover;
   display: block;
 }
 
@@ -159,8 +168,8 @@ ul {
   border: none;
   overflow: hidden;
   padding: 1rem;
-  margin: .75rem 0;
-  border-radius: .5rem;
+  margin: 0.75rem 0;
+  border-radius: 0.5rem;
   color: var(--white-color);
   font-size: 1rem;
   text-align: center;
@@ -174,7 +183,7 @@ ul {
   width: 5rem;
   border-radius: 50%;
   background: var(--white-color);
-  color: rgb(from var(--dark-color)r g b / 90%);
+  color: rgb(from var(--dark-color) r g b / 90%);
   animation: ripple 1s infinite;
 }
 

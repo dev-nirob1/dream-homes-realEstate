@@ -29,15 +29,7 @@ defineProps({
   cursor:pointer;
 }
 
-.properties-card .image {
-  height: 100%;
-  width: 100%;
-}
-
 .properties-card .image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
   transition: .5s ease-in-out;
 }
 
@@ -67,6 +59,5 @@ defineProps({
 
 .properties-card:hover img {
   transform: scale(1.1);
-
 }
 </style>

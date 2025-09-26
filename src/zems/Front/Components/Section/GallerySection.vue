@@ -42,7 +42,6 @@ const handleChangeImage = (i) => {
 .gallery .active-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .gallery .thumbs {
