@@ -78,27 +78,9 @@ const services = [
   transition: all 0.5s ease-in-out;
   overflow: visible;
 }
-
-.service-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: .75rem;
-  background: var(--dark-color);
-  opacity: 0;
-  transition: all .5s ease-in-out;
-  z-index: -1;
-}
-
-.service-card:hover::before {
-  opacity: 1;
-}
-
 .service-card:hover {
-  color: var(--white-color);
-  z-index: 4;
+ transform: translateY(-.5rem);
 }
-
 .service-card .icon {
   position: absolute;
   top: -2.5rem;
