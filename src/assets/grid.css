@@ -158,10 +158,13 @@
 [class*=' larger-m-'],
 [class^='largest-m-'],
 [class*=' largest-m-'] {
-  --mm: 1rem; /* Default margin */
+  --mm: 0; /* Default margin */
   margin: var(--mm);
 }
 
+.m{
+  --mm: 0;
+}
 .m-1 {
   --mm: 1rem;
 }
@@ -193,6 +196,7 @@
   --mx: 0px 1rem; /* Default margin */
   margin: var(--mx);
 }
+
 /* Margin Left-right */
 .mx-1 {
   --mx: 0px 1rem;
