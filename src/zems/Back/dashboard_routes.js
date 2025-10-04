@@ -1,13 +1,52 @@
-import DashboardHome from "./Pages/DashboardHome.vue";
+import DashboardLayout from './Layout/DashboardLayout.vue'
+import AddProperties from './Pages/AddProperties.vue'
+import AllProperties from './Pages/AllProperties.vue'
+import ContactMessages from './Pages/ContactMessages.vue'
+import DashboardHome from './Pages/DashboardHome.vue'
+import EditProperty from './Pages/EditProperty.vue'
+import ProfileInfo from './Pages/ProfileInfo.vue'
+import ViewProperties from './Pages/ViewProperties.vue'
 
 export default [
   {
     path: '/dashboard',
-    component: DashboardHome,
+    component: DashboardLayout,
     children: [
       {
-        path: '/'
-      }
-    ]
-  }
+        path: '',
+        name: 'dashboard-home',
+        component: DashboardHome,
+      },
+      {
+        path: 'add',
+        name: 'add-properties',
+        component: AddProperties,
+      },
+      {
+        path: 'all-properties',
+        name: 'all-properties',
+        component: AllProperties,
+      },
+      {
+        path: 'property-details/:slug',
+        name: 'property-details',
+        component: ViewProperties,
+      },
+      {
+        path: 'edit-property/:slug',
+        name: 'edit-property',
+        component: EditProperty,
+      },
+      {
+        path: 'contacts',
+        name: 'contacts',
+        component: ContactMessages,
+      },
+      {
+        path: 'profile',
+        name: 'profile',
+        component: ProfileInfo,
+      },
+    ],
+  },
 ]

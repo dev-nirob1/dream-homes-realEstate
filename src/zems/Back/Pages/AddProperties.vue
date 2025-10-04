@@ -1,6 +1,6 @@
 <template>
   <div class="add-properties">
-
+    add add-properties
   </div>
 </template>
 

@@ -1,0 +1,3 @@
+<template>
+  all messages
+</template>
