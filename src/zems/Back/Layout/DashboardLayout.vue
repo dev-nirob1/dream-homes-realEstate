@@ -3,13 +3,13 @@
     <!-- Sidebar -->
     <aside :class="['sidebar', { open: sidebarOpen }]">
       <div class="logo">
-        <BaseImage image="logo-header.png"/>
+        <RouterLink to="/"><BaseImage image="/logo-header.png"/></RouterLink>
         <!-- Mobile close button -->
         <button class="close-btn" @click="toggleSidebar">✕</button>
       </div>
       <nav>
         <router-link to="/dashboard" exact>Dashboard</router-link>
-        <router-link to="/dashboard/add">Add Property</router-link>
+        <router-link to="/dashboard/add-property">Add Property</router-link>
         <router-link to="/dashboard/all-properties">All Properties</router-link>
         <router-link to="/dashboard/contacts">Contacts</router-link>
         <router-link to="/dashboard/users">Users</router-link>
@@ -72,8 +72,8 @@ const pageTitle = computed(() => {
 /* Sidebar */
 .sidebar {
   width: 240px;
-  background: #1e293b;
-  color: #fff;
+  background: var(--dark-color);
+  color: var(--white-color);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -94,7 +94,7 @@ const pageTitle = computed(() => {
   display: none;
   background: transparent;
   border: none;
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -106,16 +106,14 @@ const pageTitle = computed(() => {
 }
 
 .sidebar nav a {
-  color: #cbd5e1;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 8px;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-weight: 600;
   transition: background 0.3s, color 0.3s;
 }
 
 .sidebar nav a.router-link-exact-active {
-  background: #3b82f6;
-  color: #fff;
+  background: var(--primary-color);
 }
 
 /* Main Area */
@@ -128,8 +126,8 @@ const pageTitle = computed(() => {
 /* Topbar */
 .topbar {
   height: 60px;
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  background: var(--white-color);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,16 +147,11 @@ const pageTitle = computed(() => {
   font-weight: 600;
 }
 
-.user-menu {
-  font-size: 0.95rem;
-  color: #374151;
-}
 
 /* Content */
 .content {
   flex: 1;
   padding: 20px;
-  background: #f4f6f9;
 }
 
 /* Responsive */

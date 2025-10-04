@@ -19,8 +19,8 @@ export default [
         component: DashboardHome,
       },
       {
-        path: 'add',
-        name: 'add-properties',
+        path: 'add-property',
+        name: 'add-property',
         component: AddProperties,
       },
       {
