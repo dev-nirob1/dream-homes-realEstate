@@ -1,6 +1,7 @@
 import DashboardLayout from './Layout/DashboardLayout.vue'
 import AddProperties from './Pages/AddProperties.vue'
 import AllProperties from './Pages/AllProperties.vue'
+import AllUsers from './Pages/AllUsers.vue'
 import ContactMessages from './Pages/ContactMessages.vue'
 import DashboardHome from './Pages/DashboardHome.vue'
 import EditProperty from './Pages/EditProperty.vue'
@@ -41,6 +42,11 @@ export default [
         path: 'contacts',
         name: 'contacts',
         component: ContactMessages,
+      },
+      {
+        path: 'users',
+        name: 'users',
+        component: AllUsers,
       },
       {
         path: 'profile',
