@@ -1,6 +1,5 @@
 import './assets/main.css'
 
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -17,6 +16,9 @@ import SubTitle from './components/Elements/SubTitle.vue'
 import HeroTitle from './components/Elements/HeroTitle.vue'
 import BaseTitle from './components/Elements/BaseTitle.vue'
 import BaseButton from './components/Elements/BaseButton.vue'
+import TableHeader from './components/Elements/TableHeader.vue'
+import BaseTable from './components/Elements/BaseTable.vue'
+import TableRow from './components/Elements/TableRow.vue'
 
 const app = createApp(App)
 app.use(createPinia())
@@ -27,10 +29,13 @@ app.component('BaseTitle', BaseTitle)
 app.component('HeroTitle', HeroTitle)
 app.component('SubTitle', SubTitle)
 app.component('InputField', InputField)
-app.component('SelectDropdown', SelectDropdown);
+app.component('SelectDropdown', SelectDropdown)
 app.component('BaseImage', BaseImage)
 app.component('BaseParagraph', BaseParagraph)
 app.component('BaseTextArea', BaseTextArea)
 app.component('ListItem', ListItem)
+app.component('TableHeader', TableHeader)
+app.component('BaseTable', BaseTable)
+app.component('TableRow', TableRow)
 
 app.mount('#app')
