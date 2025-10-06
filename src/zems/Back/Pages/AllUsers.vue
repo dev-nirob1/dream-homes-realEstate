@@ -1,8 +1,8 @@
 <template>
   <div class="users-management">
     <div class="users-content">
-      <div class="flex justify-between align-center mb-2">
-        <BaseTitle tag="h5">Total Users: 385</BaseTitle>
+      <div class="flex">
+        <SubTitle>Total Users: 385</SubTitle>
         <InputField placeholder="Search User" />
       </div>
 
