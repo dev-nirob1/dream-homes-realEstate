@@ -71,6 +71,10 @@ const pageTitle = computed(() => {
 
 /* Sidebar */
 .sidebar {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: scroll;
   width: 240px;
   background: var(--dark-color);
   color: var(--white-color);
