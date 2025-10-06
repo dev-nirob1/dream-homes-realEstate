@@ -89,7 +89,7 @@ const properties = ref([
     id: 1,
     title: 'Luxury Apartment in Gulshan',
     image:
-      'https://cdn.pixabay.com/photo/2017/08/06/06/38/architecture-2590291_1280.jpg',
+      'https://cdn.pixabay.com/photo/2017/11/10/04/47/image-2935360_1280.png',
     location: 'Gulshan, Dhaka',
     price: 25000000,
     category: 'Apartment',
@@ -99,7 +99,7 @@ const properties = ref([
     id: 2,
     title: 'Modern Villa in Uttara',
     image:
-      'https://cdn.pixabay.com/photo/2017/03/28/12/13/house-2187170_1280.jpg',
+      'https://cdn.pixabay.com/photo/2017/11/10/04/47/image-2935360_1280.png',
     location: 'Uttara, Dhaka',
     price: 35000000,
     category: 'Villa',
@@ -109,7 +109,7 @@ const properties = ref([
     id: 3,
     title: 'Office Space at Banani',
     image:
-      'https://cdn.pixabay.com/photo/2016/11/29/05/08/architecture-1868667_1280.jpg',
+      'https://cdn.pixabay.com/photo/2017/11/10/04/47/image-2935360_1280.png',
     location: 'Banani, Dhaka',
     price: 18000000,
     category: 'Commercial',
