@@ -83,6 +83,9 @@ const properties = [
 .properties {
   padding: 3.75rem 0;
 }
+.properties select {
+  max-width: fit-content;
+}
 
 .properties .flex {
   flex-direction: column;
