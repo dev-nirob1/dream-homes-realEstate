@@ -1,20 +1,48 @@
 <script setup>
-// import { Line } from 'vue-chartjs'
+import StatCard from '../Components/Widget/StatCard.vue'
+import { ref } from 'vue'
 import {
   Chart as ChartJS,
   Title,
   Tooltip,
   Legend,
-  LineElement,
+  BarElement,
   CategoryScale,
-  LinearScale,
-  PointElement,
-} from 'chart.js'
-import { ref } from 'vue'
-import StatCard from '../Components/Widget/StatCard.vue'
+  LinearScale
+} from 'chart.js';
+import { Bar } from 'vue-chartjs';
 
-ChartJS.register(Title, Tooltip, Legend, LineElement, CategoryScale, LinearScale, PointElement)
+ChartJS.register(Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale)
 
+const chartData = {
+  labels: [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ],
+  datasets: [
+    {
+      label: 'Properties Added',
+      data: [5, 8, 6, 9, 11, 14, 10, 7, 12, 16, 9, 13],
+      backgroundColor: '#4f46e5',
+      borderRadius: 5,
+    },
+  ],
+}
 
 const stats = ref([
   {
@@ -56,14 +84,25 @@ const stats = ref([
 <template>
   <div class="dashboard-overview">
     <div class="medium-2 large-4 gap-2">
-
       <StatCard v-for="stat in stats" :key="stat.id" :stat="stat" />
     </div>
+
+<div class="medium-2">
+      <div class="bar-chart">
+      <Bar :data="chartData" />
+    </div>
+</div>
   </div>
 </template>
 
 <style scoped>
 .dashboard-overview {
   padding: 2rem;
+}
+
+.bar-chart {
+  margin: 3rem 0;
+  height: 400px;
+  width: 100%;
 }
 </style>
