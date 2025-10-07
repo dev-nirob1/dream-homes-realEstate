@@ -1,7 +1,5 @@
 <template>
   <div class="profile-page">
-    <SubTitle>My Profile</SubTitle>
-
     <div class="profile-card">
       <!-- Profile Image -->
       <div class="profile-image">
@@ -68,10 +66,7 @@ const goToUpdateProfile = () => {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background: #fff;
-  border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 @media (min-width: 768px) {
@@ -93,7 +88,6 @@ const goToUpdateProfile = () => {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #4f46e5;
 }
 
 /* Profile Info */
@@ -108,13 +102,11 @@ const goToUpdateProfile = () => {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
+}
+.info-row:not(:last-child){
+  border-bottom: 1px solid var(--border-color);
 }
 
-.info-row .label {
-  font-weight: 600;
-  color: #555;
-}
 
 .info-row .value {
   color: #333;

@@ -3,7 +3,9 @@
     <!-- Sidebar -->
     <aside :class="['sidebar', { open: sidebarOpen }]">
       <div class="logo">
-        <RouterLink to="/"><BaseImage image="/logo-header.png"/></RouterLink>
+        <RouterLink to="/">
+          <BaseImage image="/logo-header.png" />
+        </RouterLink>
         <!-- Mobile close button -->
         <button class="close-btn" @click="toggleSidebar">✕</button>
       </div>
@@ -26,7 +28,7 @@
           <h1>{{ pageTitle }}</h1>
         </div>
         <div class="user-menu">
-          <span>👤 Admin</span>
+          <span><i class="fa-solid fa-user"></i> Admin</span>
         </div>
       </header>
 
@@ -49,7 +51,7 @@ const route = useRoute();
 const pageTitle = computed(() => {
   const map = {
     'dashboard-home': 'Dashboard Home',
-    'add-properties': 'Add Property',
+    'add-property': 'Add Property',
     'all-properties': 'All Properties',
     'property-details': 'Property Details',
     'edit-property': 'Edit Property',
@@ -168,12 +170,15 @@ const pageTitle = computed(() => {
     transform: translateX(-100%);
     z-index: 1000;
   }
+
   .sidebar.open {
     transform: translateX(0);
   }
+
   .sidebar .close-btn {
     display: block;
   }
+
   .topbar .hamburger {
     display: block;
   }
