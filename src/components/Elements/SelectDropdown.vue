@@ -4,7 +4,7 @@
   </select>
 </template>
 
-<style>
+<style scoped>
 select {
   max-width: fit-content;
   padding: 1rem 2rem;
