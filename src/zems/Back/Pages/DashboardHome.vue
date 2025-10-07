@@ -8,16 +8,21 @@ import {
   Legend,
   BarElement,
   CategoryScale,
-  LinearScale,
+  LinearScale, PointElement,
+  LineElement,
 } from 'chart.js';
-import { Bar, Line } from 'vue-chartjs';
+import { Bar, Line, } from 'vue-chartjs';
 
-ChartJS.register(Title,
+ChartJS.register(
+  Title,
   Tooltip,
   Legend,
   BarElement,
   CategoryScale,
-  LinearScale)
+  LinearScale,
+  PointElement,
+  LineElement,
+)
 
 
 // stats data
@@ -55,7 +60,7 @@ const stats = ref([
     color: '#ef4444', // red
   },
 ])
-  // added properties data
+// added properties data
 const propertyGrowthData = {
   labels: [
     'Jan',
@@ -113,7 +118,7 @@ const messageRecieved = {
         <Bar :data="propertyGrowthData" />
       </div>
       <div class="bar-chart">
-        <Bar :data="messageRecieved" :options="{}" />
+        <Line :data="messageRecieved" :options="{}" />
       </div>
     </div>
   </div>
