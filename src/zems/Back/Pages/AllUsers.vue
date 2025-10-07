@@ -1,79 +1,7 @@
-<template>
-  <div class="users-management">
-    <div class="users-content">
-      <div class="flex justify-between items-center mb-4">
-        <SubTitle>Total Users: {{ users.length }}</SubTitle>
-        <InputField placeholder="Search User" v-model="search" />
-      </div>
-
-      <BaseTable>
-        <TableHeader>
-          <div class="sl">SL</div>
-          <div>Name</div>
-          <div>Image</div>
-          <div>Email</div>
-          <div>Role</div>
-          <div>Member Since</div>
-          <div>Actions</div>
-        </TableHeader>
-
-        <TableRow v-for="(user, i) in filteredUsers" :key="user.id">
-          <div class="sl">
-            <div class="medium-none">SL</div>
-            {{ i + 1 }}
-          </div>
-
-          <div>
-            <div class="medium-none">Name</div>
-            {{ user.name }}
-          </div>
-
-          <div>
-            <div class="medium-none">Image</div>
-            <BaseImage :image="user.image" alt="user image" />
-          </div>
-
-          <div>
-            <div class="medium-none">Email</div>
-            {{ user.email }}
-          </div>
-
-          <div>
-            <div class="medium-none">Role</div>
-            {{ user.role }}
-          </div>
-
-          <div>
-            <div class="medium-none">Member since</div>
-            {{ user.joined }}
-          </div>
-
-          <div>
-            <div class="medium-none">Actions</div>
-            <div class="actions flex gap-2">
-              <BaseButton class="bg-primary text-white">
-                <i class="fa-solid fa-eye"></i>
-              </BaseButton>
-              <BaseButton class="bg-primary text-white">
-                <i class="fa-solid fa-pen"></i>
-              </BaseButton>
-              <BaseButton class="bg-primary text-white">
-                <i class="fa-solid fa-trash"></i>
-              </BaseButton>
-            </div>
-          </div>
-        </TableRow>
-      </BaseTable>
-    </div>
-  </div>
-</template>
-
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
+import UsersData from '../Components/Widget/UsersData.vue';
 
-const search = ref('')
-
-// Example dynamic users array
 const users = ref([
   {
     id: 1,
@@ -116,15 +44,27 @@ const users = ref([
     joined: '20-06-2023',
   },
 ])
-
-// Filtered users for search functionality
-const filteredUsers = computed(() => {
-  if (!search.value) return users.value
-  return users.value.filter(
-    (u) =>
-      u.name.toLowerCase().includes(search.value.toLowerCase()) ||
-      u.email.toLowerCase().includes(search.value.toLowerCase()) ||
-      u.role.toLowerCase().includes(search.value.toLowerCase())
-  )
-})
 </script>
+
+<template>
+  <div class="users-management">
+    <div class="medium-2 align-center">
+      <SubTitle>Total Users: {{ users.length }}</SubTitle>
+      <InputField placeholder="Search User" />
+    </div>
+
+    <BaseTable>
+      <TableHeader>
+        <div class="sl">SL</div>
+        <div>Name</div>
+        <div>Image</div>
+        <div>Email</div>
+        <div>Role</div>
+        <div>Member Since</div>
+        <div>Actions</div>
+      </TableHeader>
+
+      <UsersData v-for="(user, i) in users" :i="i" :user="user" :key="user.id" />
+    </BaseTable>
+  </div>
+</template>

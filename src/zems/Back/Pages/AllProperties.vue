@@ -53,7 +53,7 @@ const properties = ref([
         </TableHeader>
 
         <PropertyData v-for="(property, i) in properties" :i="i" :property="property" :key="property.id" />
-        
+
       </BaseTable>
     </div>
   </div>
