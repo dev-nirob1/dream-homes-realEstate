@@ -6,6 +6,7 @@ import ContactMessages from './Pages/ContactMessages.vue'
 import DashboardHome from './Pages/DashboardHome.vue'
 import EditProperty from './Pages/EditProperty.vue'
 import ProfileInfo from './Pages/ProfileInfo.vue'
+import SettingsPage from './Pages/SettingsPage.vue'
 import ViewProperties from './Pages/ViewProperties.vue'
 
 export default [
@@ -52,6 +53,11 @@ export default [
         path: 'profile',
         name: 'profile',
         component: ProfileInfo,
+      },
+      {
+        path: 'settings',
+        name: 'settings',
+        component: SettingsPage,
       },
     ],
   },
