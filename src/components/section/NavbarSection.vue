@@ -45,9 +45,23 @@ onMounted(() => {
           </ListItem>
         </ul>
 
-        <div class="desktop">
-          <RouterLink to="/login"><i class="fa-solid fa-user"></i></RouterLink>
-          <RouterLink class="btn bg-primary" to="/dashboard/add-property">Add Property</RouterLink>
+        <div class="dropdown-menu relative">
+          <BaseButton class="width-full height-full">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <BaseImage image="https://randomuser.me/api/portraits/men/32.jpg" alt="image" />
+          </BaseButton>
+
+          <ul class="dropdown">
+            <ListItem>
+              <RouterLink to="/dashboard/profile">Profile</RouterLink>
+            </ListItem>
+            <ListItem>
+              <RouterLink to="/dashboard">Dashboard</RouterLink>
+            </ListItem>
+            <ListItem>
+              <BaseButton>Logout</BaseButton>
+            </ListItem>
+          </ul>
         </div>
 
         <div @click="handleHamburger" class="hamburger flex-center">
@@ -120,8 +134,63 @@ onMounted(() => {
   background: var(--primary-color);
 }
 
-.desktop {
-  display: none;
+.dropdown-menu {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.dropdown-menu .btn {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu i {
+  font-size: 1.5rem;
+}
+
+.dropdown-menu .btn img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.dropdown-menu .btn {
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--white-color);
+  z-index: 1;
+  width: 8rem;
+  padding: 1rem .75rem;
+  transition: all .3s ease-in-out;
+  border-radius: .25rem;
+}
+
+.dropdown .btn {
+  all: inherit;
+  cursor: pointer;
+}
+
+.dropdown li,
+.dropdown .btn {
+  padding: .3rem 0;
+}
+
+.dropdown li:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-menu:hover .dropdown {
+  opacity: 1;
+  pointer-events: visible;
 }
 
 @media (min-width: 768px) {
@@ -143,22 +212,5 @@ onMounted(() => {
     color: var(--primary-color);
   }
 
-  .desktop {
-    display: block;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--white-color);
-  }
-
-  .desktop a i {
-    font-size: 1.25rem;
-    padding: .5rem;
-  }
-
-  .desktop .btn {
-    padding: .75rem 1rem;
-    border-radius: .5rem;
-  }
 }
 </style>
