@@ -16,7 +16,7 @@
         <router-link to="/dashboard/contacts">Contacts</router-link>
         <router-link to="/dashboard/users">Users</router-link>
         <router-link to="/dashboard/profile">Profile</router-link>
-        <router-link to="/dashboard/settings">Settings</router-link>
+        <!-- <router-link to="/dashboard/settings">Settings</router-link> -->
       </nav>
     </aside>
 

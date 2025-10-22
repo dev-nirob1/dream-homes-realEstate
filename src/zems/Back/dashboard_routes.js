@@ -54,11 +54,11 @@ export default [
         name: 'profile',
         component: ProfileInfo,
       },
-      {
-        path: 'settings',
-        name: 'settings',
-        component: SettingsPage,
-      },
+      // {
+      //   path: 'settings',
+      //   name: 'settings',
+      //   component: SettingsPage,
+      // },
     ],
   },
 ]
